@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Юрий Угаров — UX/UI дизайнер</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <header class="site-header" id="site-header">
+      <div class="wrap header">
+        <a class="logo" href="#top">Ugarov</a>
+        <div class="header-end">
+          <p class="meta-line">
+            <span>г. Нижний Новгород</span>
+            <span class="muted" id="clock">18:19 GMT +3</span>
+          </p>
+          <nav class="nav nav--desktop" aria-label="Основная навигация">
+            <a class="nav-link" href="#projects">Проекты</a>
+            <a class="nav-link" href="#about">Обо мне</a>
+            <a class="nav-link" href="#contacts">Контакты</a>
+          </nav>
+          <div class="nav-mobile">
+            <input
+              id="topnav-drawer"
+              type="checkbox"
+              class="drawer-toggle"
+            />
+            <label
+              class="menu-btn"
+              for="topnav-drawer"
+              aria-label="Открыть меню"
+            >
+              <span class="sr-only">Меню</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            </label>
+            <div class="drawer-side">
+              <label
+                class="drawer-overlay"
+                for="topnav-drawer"
+                aria-label="Закрыть меню"
+              ></label>
+              <nav class="drawer-panel" aria-label="Мобильная навигация">
+                <a href="#projects">Проекты</a>
+                <a href="#about">Обо мне</a>
+                <a href="#contacts">Контакты</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="page" id="top">
+      <div class="hero">
+        <div class="hero-vline" aria-hidden="true"></div>
+        <div class="hero-hline" aria-hidden="true"></div>
+
+        <div class="wrap hero-body">
+          <div class="hero-copy">
+            <h1>Юрий Угаров<br />UX/UI дизайнер</h1>
+            <p class="hero-lead">
+              Разработка стильных дизайн-проектов с&nbsp;упором на&nbsp;задачи
+              бизнеса, маркетинг и&nbsp;индивидуальный подход
+            </p>
+          </div>
+
+          <div class="hero-aside">
+            <a
+              class="award"
+              href="https://dprofile.ru"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="award-badge">
+                <img
+                  src="/images/dprofile-badge.svg"
+                  width="39.3506"
+                  height="39.3506"
+                  alt=""
+                />
+                <span>2</span>
+              </span>
+              <span class="award-text">
+                <span class="award-name">Dprofile</span>
+                <span class="award-cat">Интерфейсы</span>
+              </span>
+            </a>
+
+            <div class="hero-contacts">
+              <div class="hero-social">
+                <a href="https://www.behance.net" target="_blank" rel="noreferrer"
+                  >Behance</a
+                >
+                <a href="https://dprofile.ru" target="_blank" rel="noreferrer"
+                  >Dprofile</a
+                >
+              </div>
+              <p class="contact-line">
+                <span>e-mail:</span>
+                <a href="mailto:Yuriy.Ug@yandex.ru">Yuriy.Ug@yandex.ru</a>
+              </p>
+              <p class="contact-line contact-line--tg">
+                <span>телеграм:</span>
+                <a href="https://t.me/ugarovpro" target="_blank" rel="noreferrer"
+                  >@ugarovpro</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section" id="projects">
+        <div class="wrap">
+          <div class="projects-board">
+            <p class="descriptor">
+              <img
+                src="/images/icon-projects.svg"
+                width="24"
+                height="24"
+                alt=""
+              />
+              Свежие кейсы
+            </p>
+
+            <p class="projects-note projects-note--a">
+              В своих проектах я применяю не только свой дизайнерский опыт, но и
+              маркетинговый.
+            </p>
+            <p class="projects-note projects-note--b">
+              Это позволяет добиться максимальной эффективности.
+            </p>
+            <p class="projects-note projects-note--c">
+              В своих проектах я применяю не только свой дизайнерский опыт, но и
+              маркетинговый.
+            </p>
+            <p class="projects-note projects-note--d">
+              Это позволяет добиться максимальной эффективности.
+            </p>
+
+            <a class="card card--pti" href="#projects">
+              <span class="card-title">[ Промтехизыскания ]</span>
+              <span class="card-index">01</span>
+              <span class="card-mark card-mark--pti">PTI</span>
+              <img
+                class="card-shot card-shot--pti"
+                src="/images/pti-mockup.png"
+                alt="Макет сайта Промтехизыскания"
+              />
+              <span class="card-meta">
+                <span class="tags">
+                  <span class="tag">Веб-дизайн</span>
+                  <span class="tag">Корпоративный сайт</span>
+                </span>
+                <span class="card-year">2023</span>
+              </span>
+            </a>
+
+            <a class="card card--nick" href="#projects">
+              <span class="card-title">[ Юрист Ник Фомин ]</span>
+              <span class="card-index">02</span>
+              <span class="phone">
+                <img src="/images/nick-photo.png" alt="Мобильный сайт Ника Фомина" />
+                <span class="phone-notch"></span>
+              </span>
+              <span class="card-meta">
+                <span class="tags">
+                  <span class="tag">Веб-дизайн</span>
+                  <span class="tag">Сайт-визитка</span>
+                </span>
+                <span class="card-year">2022</span>
+              </span>
+            </a>
+
+            <a class="card card--circle card--alicana" href="#projects">
+              <span class="card-index">03</span>
+              <img
+                class="card-product card-product--alicana"
+                src="/images/alicana.png"
+                alt="Упаковка Alicana CBD"
+              />
+              <svg class="card-arc" viewBox="0 0 176 176" aria-hidden="true">
+                <path
+                  id="arc-alicana"
+                  fill="none"
+                  d="M 22 88 A 66 66 0 0 1 154 88 A 66 66 0 0 1 22 88"
+                />
+                <text>
+                  <textPath href="#arc-alicana" startOffset="12%">
+                    <tspan fill="#fff">[ ALICANA CBD ]</tspan>
+                    <tspan fill="#878787"> — УПАКОВКА — 2021</tspan>
+                  </textPath>
+                </text>
+              </svg>
+            </a>
+
+            <a class="card card--octava" href="#projects">
+              <span class="card-title">[ Октава ]</span>
+              <span class="card-index">06</span>
+              <img
+                class="card-round-shot"
+                src="/images/octava.png"
+                alt="Ноутбук с сайтом Октава"
+              />
+              <span class="card-meta">
+                <span class="tags">
+                  <span class="tag">Веб-дизайн</span>
+                  <span class="tag">Корпоративный сайт</span>
+                </span>
+                <span class="card-year">2021</span>
+              </span>
+            </a>
+
+            <a class="card card--rwb" href="#projects">
+              <span class="card-title">[ RWB ]</span>
+              <span class="card-index">04</span>
+              <span class="tablet">
+                <img src="/images/rwb-overlay.png" alt="Сайт RWB" />
+              </span>
+              <span class="card-meta">
+                <span class="tags">
+                  <span class="tag">Веб-дизайн</span>
+                  <span class="tag">Корпоративный сайт</span>
+                </span>
+                <span class="card-year">2022</span>
+              </span>
+            </a>
+
+            <a class="card card--dyson" href="#projects">
+              <span class="card-title">[ Dyson ]</span>
+              <span class="card-index">05</span>
+              <span class="card-mark card-mark--dy">DY</span>
+              <span class="phones">
+                <span class="phone phone--sm">
+                  <img src="/images/dyson/4.png" alt="" />
+                  <span class="phone-notch"></span>
+                </span>
+                <span class="phone phone--sm">
+                  <img class="phone-mid" src="/images/dyson/6.png" alt="" />
+                  <span class="phone-notch"></span>
+                </span>
+                <span class="phone phone--sm">
+                  <img src="/images/dyson/3.png" alt="Интернет-магазин Dyson" />
+                  <span class="phone-notch"></span>
+                </span>
+              </span>
+              <span class="card-meta">
+                <span class="tags">
+                  <span class="tag">Веб-дизайн</span>
+                  <span class="tag">Интернет-магазин</span>
+                </span>
+                <span class="card-year">2022</span>
+              </span>
+            </a>
+
+            <a class="card card--circle card--landing" href="#projects">
+              <span class="card-index">07</span>
+              <img
+                class="card-product card-product--landing"
+                src="/images/landing-phones.png"
+                alt="Мокап лендинга автоматизации"
+              />
+              <svg class="card-arc" viewBox="0 0 176 176" aria-hidden="true">
+                <path
+                  id="arc-landing"
+                  fill="none"
+                  d="M 22 88 A 66 66 0 1 1 22 88.01"
+                />
+                <text>
+                  <textPath href="#arc-landing" startOffset="8%">
+                    <tspan fill="#fff">[ СЕРВИСЫ АВТОМАТИЗАЦИИ БИЗНЕСА ]</tspan>
+                    <tspan fill="#878787"> — ЛЕНДИНГ — 2023</tspan>
+                  </textPath>
+                </text>
+              </svg>
+            </a>
+
+            <div class="projects-cta">
+              <p class="projects-note">
+                Ты только посмотри какие красивые проекты! Жми на кнопку — там
+                их ещё больше увидишь ты :)
+              </p>
+              <a class="btn-pill btn-pill--sm" href="#projects">
+                Смотри тут ещё
+                <img src="/images/icon-eye.svg" width="40" height="20" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="about-lines" aria-hidden="true"></div>
+        <div class="wrap">
+          <div class="about-head">
+            <p class="descriptor descriptor--overlay">
+              <img src="/images/icon-about.svg" width="24" height="24" alt="" />
+              Про меня
+            </p>
+            <h2 class="about-title">
+              Проектирование, а не рисование просто красивых картинок — это мой
+              подход к&nbsp;работе над дизайном интерфейсов
+            </h2>
+          </div>
+
+          <div class="about-body">
+            <div class="span-2 about-spacer"></div>
+            <div class="span-4 about-content">
+              <div class="about-cols">
+                <p>
+                  В основе подхода здравый смысл и польза, инженерная эстетика
+                  без перегрузки графикой и&nbsp;внимание к&nbsp;деталям
+                </p>
+                <p>
+                  Я разрабатываю дизайн цифровых продуктов ориентированный на
+                  решение задач бизнеса и&nbsp;маркетинга
+                </p>
+              </div>
+              <a class="btn-pill" href="#about">
+                Читай тут про меня
+                <img src="/images/icon-eye.svg" width="40" height="20" alt="" />
+              </a>
+              <img
+                class="about-photo"
+                src="/images/about-photo.png"
+                alt="Юрий Угаров"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="wrap services-layout">
+          <div class="span-4 services-visual">
+            <p class="descriptor">
+              <img
+                src="/images/icon-services.svg"
+                width="24"
+                height="24"
+                alt=""
+              />
+              Услуги
+            </p>
+            <div class="services-preview">
+              <img
+                src="/images/services-preview.png"
+                alt="Превью работ: корпоративные сайты на разных устройствах"
+              />
+            </div>
+            <div class="services-deco" aria-hidden="true"></div>
+          </div>
+
+          <div class="span-4 services-list">
+            <details name="services">
+              <summary>
+                <span>одностраничный сайт (лендинг)</span>
+                <img
+                  class="chevron-closed"
+                  src="/images/icon-arrow.svg"
+                  width="19.4176"
+                  height="19.3144"
+                  alt=""
+                />
+                <img
+                  class="chevron-open"
+                  src="/images/icon-arrow-open.svg"
+                  width="19.4176"
+                  height="19.3144"
+                  alt=""
+                />
+              </summary>
+            </details>
+
+            <details name="services" open>
+              <summary>
+                <span>Корпоративный сайт</span>
+                <img
+                  class="chevron-closed"
+                  src="/images/icon-arrow.svg"
+                  width="19.4176"
+                  height="19.3144"
+                  alt=""
+                />
+                <img
+                  class="chevron-open"
+                  src="/images/icon-arrow-open.svg"
+                  width="19.4176"
+                  height="19.3144"
+                  alt=""
+                />
+              </summary>
+              <div class="service-body">
+                <div class="service-step">
+                  <div>
+                    <p class="service-step-title">аудит и прототип</p>
+                    <p class="service-step-text">
+                      Маркетинговый аудит продукта Заказчика и создание
+                      текстового прототипа одностраничного сайта (далее
+                      лендинга)
+                    </p>
+                  </div>
+                  <p class="service-price">50 000 ₽/10 дней</p>
+                </div>
+                <div class="service-step">
+                  <div>
+                    <p class="service-step-title">Дизайн</p>
+                    <p class="service-step-text">
+                      Создание дизайн-макета лендинга на основе тестового
+                      прототипа со всеми необходимыми адаптивами (десктоп,
+                      мобилка, ноутбук, планшет).
+                    </p>
+                  </div>
+                  <p class="service-price">50 000 ₽/10 дней</p>
+                </div>
+                <div class="service-step">
+                  <div>
+                    <p class="service-step-title">Верстка</p>
+                    <p class="service-step-text">
+                      Верстка лендинга на коде. Кроссбраузерно (хорошо
+                      отображается на популярных браузерах Safari, Google
+                      Chrome, Opera), адаптивно. Перенос сайта на систему
+                      управления контентом сайта Wordpress.
+                      Установка метрик и интеграций
+                    </p>
+                  </div>
+                  <p class="service-price">50 000 ₽/10 дней</p>
+                </div>
+                <div class="service-cta">
+                  <a class="btn-solid" href="mailto:Yuriy.Ug@yandex.ru">Заказать</a>
+                  <p class="service-total">150 000 ₽/30 дней</p>
+                </div>
+              </div>
+            </details>
+
+            <details name="services">
+              <summary>
+                <span>Интернет-магазин</span>
+                <img
+                  class="chevron-closed"
+                  src="/images/icon-arrow.svg"
+                  width="19.4176"
+                  height="19.3144"
+                  alt=""
+                />
+                <img
+                  class="chevron-open"
+                  src="/images/icon-arrow-open.svg"
+                  width="19.4176"
+                  height="19.3144"
+                  alt=""
+                />
+              </summary>
+            </details>
+
+            <details name="services">
+              <summary>
+                <span>Дизайн упаковки</span>
+                <img
+                  class="chevron-closed"
+                  src="/images/icon-arrow.svg"
+                  width="19.4176"
+                  height="19.3144"
+                  alt=""
+                />
+                <img
+                  class="chevron-open"
+                  src="/images/icon-arrow-open.svg"
+                  width="19.4176"
+                  height="19.3144"
+                  alt=""
+                />
+              </summary>
+            </details>
+
+            <details name="services">
+              <summary>
+                <span>логотип и Фирменный стиль</span>
+                <img
+                  class="chevron-closed"
+                  src="/images/icon-arrow.svg"
+                  width="19.4176"
+                  height="19.3144"
+                  alt=""
+                />
+                <img
+                  class="chevron-open"
+                  src="/images/icon-arrow-open.svg"
+                  width="19.4176"
+                  height="19.3144"
+                  alt=""
+                />
+              </summary>
+            </details>
+
+            <details name="services">
+              <summary>
+                <span>дизайнерское сопровождение</span>
+                <img
+                  class="chevron-closed"
+                  src="/images/icon-arrow.svg"
+                  width="19.4176"
+                  height="19.3144"
+                  alt=""
+                />
+                <img
+                  class="chevron-open"
+                  src="/images/icon-arrow-open.svg"
+                  width="19.4176"
+                  height="19.3144"
+                  alt=""
+                />
+              </summary>
+            </details>
+
+            <details name="services">
+              <summary>
+                <span>Экспертиза/Консультация</span>
+                <img
+                  class="chevron-closed"
+                  src="/images/icon-arrow.svg"
+                  width="19.4176"
+                  height="19.3144"
+                  alt=""
+                />
+                <img
+                  class="chevron-open"
+                  src="/images/icon-arrow-open.svg"
+                  width="19.4176"
+                  height="19.3144"
+                  alt=""
+                />
+              </summary>
+            </details>
+
+            <details name="services">
+              <summary>
+                <span>Экспресс-дизайн</span>
+                <img
+                  class="chevron-closed"
+                  src="/images/icon-arrow.svg"
+                  width="19.4176"
+                  height="19.3144"
+                  alt=""
+                />
+                <img
+                  class="chevron-open"
+                  src="/images/icon-arrow-open.svg"
+                  width="19.4176"
+                  height="19.3144"
+                  alt=""
+                />
+              </summary>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer" id="contacts">
+        <div class="footer-pattern" aria-hidden="true"></div>
+        <div class="wrap footer-inner">
+          <div class="footer-top">
+            <p class="footer-lead">
+              Если ты хочешь связаться со мной, чтобы обсудить проект или
+              проконсультироваться, то просто напиши мне в соцсетях или на email
+            </p>
+            <p class="footer-meow">
+              мур
+              <img src="/images/icon-heart.svg" width="30" height="30" alt="" />
+            </p>
+          </div>
+
+          <p class="footer-contacts">
+            е: <a href="mailto:Yuriy.Ug@yandex.ru">yuriy.ug@yandex.ru</a><br />
+            т: <a href="https://t.me/ugarovpro" target="_blank" rel="noreferrer">@ugarovpro</a>
+          </p>
+
+          <div class="footer-mid">
+            <div class="footer-policies">
+              <a href="#contacts">Политика Cookie</a>
+              <a href="#contacts">Политика конфиденциальности</a>
+            </div>
+            <div class="footer-btns">
+              <a class="btn-ghost" href="https://vk.com" target="_blank" rel="noreferrer">vk</a>
+              <a
+                class="btn-ghost"
+                href="https://t.me/ugarovpro"
+                target="_blank"
+                rel="noreferrer"
+                >Telegram</a
+              >
+              <a class="btn-dark" href="mailto:Yuriy.Ug@yandex.ru">Контакты</a>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p class="logo-foot">UGAROV</p>
+            <nav class="footer-nav">
+              <a href="#top">Главная</a>
+              <a href="#projects">Проекты</a>
+              <a href="#about">Обо мне</a>
+              <a href="#contacts">Контакты</a>
+              <a href="#top">Наверх</a>
+            </nav>
+            <p class="footer-year">2023</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
