@@ -6,13 +6,13 @@ const prefersReducedMotion = window.matchMedia(
   '(prefers-reduced-motion: reduce)',
 ).matches
 
-if (!prefersReducedMotion) {
-  new Lenis({
-    autoRaf: true,
-    anchors: true,
-    lerp: 0.07,
-  })
-}
+// if (!prefersReducedMotion) {
+//   new Lenis({
+//     autoRaf: true,
+//     anchors: true,
+//     lerp: 0.07,
+//   })
+// }
 
 function moscowClock() {
   return new Intl.DateTimeFormat('en-GB', {
