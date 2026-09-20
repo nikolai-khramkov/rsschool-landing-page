@@ -4,7 +4,7 @@
 
 ## Ссылка на проект
 
-[https://nikolai-khramkov.github.io/rsschool-landing-page/](https://nikolai-khramkov.github.io/rsschool-landing-page/)
+[https://ugarov.hramkov.com/](https://ugarov.hramkov.com/)
 
 ## Запуск локльно
 
@@ -14,4 +14,3 @@
 pnpm install
 pnpm dev
 ```
-
