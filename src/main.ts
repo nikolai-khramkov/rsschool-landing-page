@@ -1,19 +1,3 @@
-import Lenis from 'lenis'
-import 'lenis/dist/lenis.css'
-import './style.css'
-
-const prefersReducedMotion = window.matchMedia(
-  '(prefers-reduced-motion: reduce)',
-).matches
-
-// if (!prefersReducedMotion) {
-//   new Lenis({
-//     autoRaf: true,
-//     anchors: true,
-//     lerp: 0.07,
-//   })
-// }
-
 function moscowClock() {
   return new Intl.DateTimeFormat('en-GB', {
     timeZone: 'Europe/Moscow',

@@ -59,7 +59,7 @@ p {
 }
 
 .page {
-  overflow-x: hidden;
+  overflow: hidden;
   background: var(--bg);
 }
 
@@ -932,30 +932,34 @@ body.nav-open .site-header {
 }
 
 .about-services-board {
-  --board-h: 1950;
+  --board-h: 2480;
   --photo-left: calc(var(--col) * 5 + var(--gutter) * 5);
   --photo-size: calc(var(--col) * 3 + var(--gutter) * 2);
   position: relative;
   width: 100%;
-  aspect-ratio: 1480 / 1950;
-  min-height: 1950px;
+  aspect-ratio: 1480 / 2480;
+  min-height: 2480px;
 }
 
 .about-services .about,
-.about-services .services {
+.about-services .services,
+.about-services .reviews {
   display: contents;
 }
 
 .about-title,
 .descriptor--about,
 .descriptor--services,
+.descriptor--reviews,
 .about-content,
 .expertise-title,
+.reviews-title,
 .services-disclaimer,
 .services-col,
 .service-card--03,
 .service-card--06,
-.services-contact {
+.services-contact,
+.reviews-list {
   z-index: 3;
 }
 
@@ -976,7 +980,7 @@ body.nav-open .site-header {
   left: calc(var(--col) * 2 + var(--gutter) * 2);
   top: calc(36 / var(--board-h) * 100%);
   width: 1px;
-  height: calc(1814 / var(--board-h) * 100%);
+  height: calc(2344 / var(--board-h) * 100%);
 }
 
 .about-line--v2 {
@@ -994,6 +998,13 @@ body.nav-open .site-header {
 }
 
 .about-line--h2 {
+  left: 0;
+  top: calc(1950 / var(--board-h) * 100%);
+  width: 100%;
+  height: 1px;
+}
+
+.about-line--h3 {
   left: 0;
   bottom: 0;
   width: 100%;
@@ -1041,7 +1052,8 @@ body.nav-open .site-header {
 }
 
 .descriptor--about,
-.descriptor--services {
+.descriptor--services,
+.descriptor--reviews {
   position: absolute;
   left: 0;
   margin: 0;
@@ -1240,53 +1252,70 @@ body.nav-open .site-header {
   text-underline-offset: 3px;
 }
 
+.reviews-title {
+  position: absolute;
+  left: calc(var(--col) * 2 + var(--gutter) * 2);
+  top: calc(2049 / var(--board-h) * 100%);
+  width: calc(var(--col) * 2 + var(--gutter));
+  font-size: clamp(32px, 3.75vw, 60px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  scroll-margin-top: 80px;
+}
+
+.descriptor--reviews {
+  top: calc(2232 / var(--board-h) * 100%);
+}
+
+.reviews-list {
+  position: absolute;
+  left: calc(var(--col) * 2 + var(--gutter) * 2);
+  top: calc(2217 / var(--board-h) * 100%);
+  width: calc(var(--col) * 6 + var(--gutter) * 5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.review-row {
+  display: grid;
+  grid-template-columns:
+    calc(var(--col) * 2 + var(--gutter) * 1.5)
+    calc(var(--col) + var(--gutter))
+    1fr;
+  gap: var(--gutter);
+  align-items: center;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  font-size: 16px;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.review-client {
+  color: var(--text);
+}
+
+.review-type,
+.review-work {
+  font-weight: 300;
+  color: var(--muted);
+}
+
+.review-client,
+.review-type,
+.review-work {
+  min-width: 0;
+  white-space: nowrap;
+}
+
 /* Footer */
 .footer {
   position: relative;
   background: var(--footer-bg);
   color: var(--footer-text);
   color-scheme: light;
-}
-
-.footer::before,
-.footer::after,
-.footer-vline,
-.footer-hline {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  transform-origin: center;
-  pointer-events: none;
-}
-
-.footer::before,
-.footer::after {
-  width: 160vmax;
-  height: 0.25px;
-}
-
-.footer::before {
-  transform: translate(-50%, -50%) rotate(28deg);
-}
-
-.footer::after {
-  transform: translate(-50%, -50%) rotate(-28deg);
-}
-
-.footer-vline {
-  width: 0.5px;
-  background: rgba(255, 255, 255, 0.109);
-  height: 30vmax;
-  transform: translate(-50%, -50%);
-}
-
-.footer-hline {
-  width: 0.5px;
-  background: rgba(255, 255, 255, 0.109);
-  height: 10vmax;
-  transform: translate(-50%, -50%) rotate(-90deg);
 }
 
 .footer-inner {
@@ -1519,7 +1548,8 @@ body.nav-open .site-header {
   }
 
   .about-services .about,
-  .about-services .services {
+  .about-services .services,
+  .about-services .reviews {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -1528,14 +1558,17 @@ body.nav-open .site-header {
   .about-title,
   .descriptor--about,
   .descriptor--services,
+  .descriptor--reviews,
   .about-content,
   .about-photo,
   .expertise-title,
+  .reviews-title,
   .services-disclaimer,
   .services-col,
   .service-card--03,
   .service-card--06,
-  .services-contact {
+  .services-contact,
+  .reviews-list {
     position: static;
     left: auto;
     top: auto;
@@ -1547,8 +1580,21 @@ body.nav-open .site-header {
     text-align: left;
   }
 
-  .expertise-title {
+  .expertise-title,
+  .reviews-title {
     text-align: left;
+  }
+
+  .review-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 14px 0;
+  }
+
+  .review-client,
+  .review-type,
+  .review-work {
+    white-space: normal;
   }
 
   .about-content {
