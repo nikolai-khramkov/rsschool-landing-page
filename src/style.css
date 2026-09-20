@@ -306,13 +306,13 @@ body.nav-open .site-header {
 .hero-line--d2 {
   left: 50%;
   top: 55%;
-  width: hypot(100cqw, 82cqh);
+  width: 220vmax;
   height: 1px;
   transform-origin: 50% 50%;
 }
 
 .hero-line--d1 {
-  transform: translate(-50%, -50%) rotate(atan2(-40.1cqh, -50cqw));
+  transform: translate(-50%, -50%) rotate(atan2(40.1cqh, 50cqw));
 }
 
 .hero-line--d2 {
@@ -1061,28 +1061,28 @@ body.nav-open .site-header {
 
 .about-x {
   position: absolute;
-  left: var(--photo-left);
-  top: calc(447 / var(--board-h) * 100%);
-  width: var(--photo-size);
-  aspect-ratio: 1;
+  left: calc(var(--photo-left) - 130px);
+  top: calc(722 / var(--board-h) * 100%);
+  width: 0;
+  height: 0;
 }
 
 .about-x span {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: 0;
   width: 220vmax;
   height: 1px;
   background: var(--line);
-  transform-origin: center;
+  transform-origin: left center;
 }
 
 .about-x span:first-child {
-  transform: translate(-50%, -50%) rotate(32deg);
+  transform: translateY(-40%) rotate(42deg);
 }
 
 .about-x span:last-child {
-  transform: translate(-50%, -50%) rotate(-32deg);
+  transform: translateY(-40%) rotate(-42deg);
 }
 
 .about-title {
@@ -1153,7 +1153,7 @@ body.nav-open .site-header {
 .about-photo {
   position: absolute;
   left: var(--photo-left);
-  top: calc(447 / var(--board-h) * 100%);
+  top: calc(722 / var(--board-h) * 100% - var(--photo-size) / 2);
   z-index: 1;
   width: var(--photo-size);
   height: var(--photo-size);
