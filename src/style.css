@@ -627,7 +627,7 @@ body.nav-open .site-header {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/images/card-noise.png') top left / 1600px 900px;
+  background: url('/images/card-noise.webp') top left / 1600px 900px;
   opacity: 0.25;
   pointer-events: none;
 }
