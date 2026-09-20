@@ -306,15 +306,15 @@ body.nav-open .site-header {
 
 .hero-line--v1 {
   left: 50%;
-  top: 55%;
+  top: 53%;
   width: var(--line-size);
-  height: 80%;
+  height: 83%;
   transform: translate(-50%, -45%);
 }
 
 .hero-line--h1 {
   left: 50%;
-  top: 55%;
+  top: 58%;
   width: 10vw;
   height: var(--line-size);
   transform: translate(-50%, -50%);
@@ -323,7 +323,7 @@ body.nav-open .site-header {
 .hero-line--d1,
 .hero-line--d2 {
   left: 50%;
-  top: 55%;
+  top: 58%;
   width: 220vmax;
   height: 1px;
   transform-origin: 50% 50%;
