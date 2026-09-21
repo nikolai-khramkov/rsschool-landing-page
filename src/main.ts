@@ -47,3 +47,28 @@ window.addEventListener('keydown', (event) => {
 window.addEventListener('resize', () => {
   if (window.innerWidth > 720) setMobileMenuOpen(false)
 })
+
+const THEME_KEY = 'theme'
+const themeToggle = document.querySelector<HTMLButtonElement>('#theme-toggle')
+
+const applyTheme = (theme: 'light' | 'dark') => {
+  if (theme === 'light') document.documentElement.dataset.theme = 'light'
+  else delete document.documentElement.dataset.theme
+
+  const light = theme === 'light'
+  themeToggle?.setAttribute('aria-pressed', String(light))
+  themeToggle?.setAttribute(
+    'aria-label',
+    light ? 'Включить тёмную тему' : 'Включить светлую тему',
+  )
+}
+
+applyTheme(localStorage.getItem(THEME_KEY) === 'light' ? 'light' : 'dark')
+
+if (themeToggle) {
+  themeToggle.onclick = () => {
+    const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light'
+    localStorage.setItem(THEME_KEY, next)
+    applyTheme(next)
+  }
+}

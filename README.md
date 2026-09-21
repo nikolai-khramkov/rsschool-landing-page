@@ -4,6 +4,8 @@
 
 CSS + Vanilla JS
 
+Переключение светлой и темной темы с сохранением в Local Storage
+
 ## Ссылка на проект
 
 [https://ugarov.hramkov.com/](https://ugarov.hramkov.com/)

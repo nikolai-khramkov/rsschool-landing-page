@@ -11,12 +11,26 @@
   --gold: #a99160;
   --footer-bg: #f2f2f2;
   --footer-text: #1d2226;
+  --header-bg: rgba(16, 16, 16, 0.97);
   --cols: 8;
   --gutter: 10px;
   --margin: clamp(16px, 3.75vw, 60px);
   --page: 1600px;
   --font: 'Onest', system-ui, sans-serif;
   color-scheme: dark;
+}
+
+html[data-theme='light'] {
+  --bg: #f4f3ef;
+  --bg-secondary: #fafafa;
+  --bg-card: #d3d3d3;
+  --text: #1d2226;
+  --muted: #5c6368;
+  --line: #d0d0d0;
+  --line-soft: rgba(0, 0, 0, 0.08);
+  --stroke: #6b7278;
+  --header-bg: rgba(250, 250, 250, 0.97);
+  color-scheme: light;
 }
 
 *,
@@ -106,7 +120,7 @@ p {
 }
 
 .site-header.is-scrolled {
-  background: rgba(16, 16, 16, 0.97);
+  background: var(--header-bg);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
 }
 
@@ -143,7 +157,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc(var(--col) * 4 + var(--gutter) * 3);
+  width: calc(var(--col) * 5 + var(--gutter) * 3);
 }
 
 .meta-line {
@@ -162,8 +176,9 @@ p {
 
 .nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: calc(var(--col) * 2 + var(--gutter));
+  width: calc(var(--col) * 3 + var(--gutter) - 44px);
 }
 
 .nav-link {
@@ -180,12 +195,37 @@ p {
   top: calc(100% + 5px);
   height: 0.5px;
   width: 0;
-  background: #fff;
+  background: var(--text);
   transition: width 0.2s ease;
 }
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-left: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+html:not([data-theme='light']) .theme-icon--moon,
+html[data-theme='light'] .theme-icon--sun {
+  display: none;
 }
 
 .nav-mobile {
@@ -845,8 +885,9 @@ body.nav-open .site-header {
   pointer-events: none;
 }
 
-.card-arc text {
-  fill: #fff;
+.card-arc text,
+.card-arc tspan {
+  fill: var(--text);
   font-family: var(--font);
   font-weight: 300;
   font-size: 14px;
@@ -971,7 +1012,7 @@ body.nav-open .site-header {
   font-size: 16px;
   font-weight: 300;
   letter-spacing: -0.04em;
-  color: #fff;
+  color: var(--text);
 }
 
 .btn-pill--sm {
@@ -989,7 +1030,15 @@ body.nav-open .site-header {
 }
 
 .btn-pill:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: color-mix(in srgb, var(--text) 8%, transparent);
+}
+
+html[data-theme='light'] .btn-pill img {
+  filter: brightness(0);
+}
+
+html[data-theme='light'] .site-header.is-scrolled {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 /* About + Services */
