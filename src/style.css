@@ -927,7 +927,7 @@ body.nav-open .site-header {
 
 .card-shot--pti {
   position: absolute;
-  left: 10.15%;
+  left: 27.9%;
   top: 10%;
   height: 100%;
   max-width: none;
@@ -936,13 +936,13 @@ body.nav-open .site-header {
 }
 
 .pti-screen {
-  width: 1015px;
+  width: 1020px;
   height: 660px;
   overflow: hidden;
   background: #061923;
   transform: matrix3d(
     0.8762044767, 0.1301307925, 0, 0.0000220206,
-    -0.0594489725, 1, 0, -0.0000708311,
+    -0.0384489725, 1, 0, -0.0000558311,
     0, 0, 1, 0,
     320, 106, 0, 1
   );
