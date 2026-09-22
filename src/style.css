@@ -41,6 +41,8 @@ html[data-theme='light'] {
 
 html {
   scroll-behavior: smooth;
+  overscroll-behavior-y: none; 
+  scrollbar-width: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
