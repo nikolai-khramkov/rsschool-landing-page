@@ -577,18 +577,22 @@ body.nav-open .site-header {
 }
 
 /* Sections */
+#projects {
+  scroll-margin-top: 100px;
+}
+
 .section {
   padding-top: 0;
   padding-bottom: 80px;
 }
 
-#projects {
+.projects {
   position: relative;
   isolation: isolate;
 }
 
-#projects::before,
-#projects::after {
+.projects::before,
+.projects::after {
   content: "";
   position: absolute;
   left: 0;
@@ -597,13 +601,13 @@ body.nav-open .site-header {
   pointer-events: none;
 }
 
-#projects::before {
+.projects::before {
   top: 0;
   height: 50%;
   background: var(--bg);
 }
 
-#projects::after {
+.projects::after {
   top: 12%;
   bottom: 0;
   background: var(--bg-secondary);
