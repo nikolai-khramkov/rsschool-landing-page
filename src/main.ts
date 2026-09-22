@@ -1,19 +1,50 @@
-function moscowClock() {
-  return new Intl.DateTimeFormat('en-GB', {
-    timeZone: 'Europe/Moscow',
-    hour: '2-digit',
-    minute: '2-digit',
-    hourCycle: 'h23',
-  }).format(new Date()) + ' GMT +3'
+const moscowTimeFormatter = new Intl.DateTimeFormat('en-GB', {
+  timeZone: 'Europe/Moscow',
+  hour: '2-digit',
+  minute: '2-digit',
+  hourCycle: 'h23',
+})
+
+function moscowTimeParts(date = new Date()) {
+  const parts = moscowTimeFormatter.formatToParts(date)
+  return {
+    hour: parts.find((part) => part.type === 'hour')?.value ?? '00',
+    minute: parts.find((part) => part.type === 'minute')?.value ?? '00',
+  }
+}
+
+const moscowSecondFormatter = new Intl.DateTimeFormat('en-GB', {
+  timeZone: 'Europe/Moscow',
+  second: 'numeric',
+})
+
+function moscowSecond(date = new Date()) {
+  return Number(moscowSecondFormatter.format(date))
+}
+
+function ensureClockMarkup(clockEl: HTMLElement) {
+  if (clockEl.querySelector('.clock-sep')) return
+
+  clockEl.innerHTML =
+    '<span class="clock-time"><span data-clock="hour">00</span><span class="clock-sep" aria-hidden="true">:</span><span data-clock="minute">00</span></span> GMT +3'
 }
 
 const clock = document.querySelector<HTMLElement>('#clock')
 if (clock) {
+  ensureClockMarkup(clock)
+  const hourEl = clock.querySelector<HTMLElement>('[data-clock="hour"]')
+  const minuteEl = clock.querySelector<HTMLElement>('[data-clock="minute"]')
+  const sepEl = clock.querySelector<HTMLElement>('.clock-sep')
+
   const tick = () => {
-    clock.textContent = moscowClock()
+    const now = new Date()
+    const { hour, minute } = moscowTimeParts(now)
+    if (hourEl) hourEl.textContent = hour
+    if (minuteEl) minuteEl.textContent = minute
+    sepEl?.classList.toggle('is-dim', moscowSecond(now) % 2 === 1)
   }
   tick()
-  window.setInterval(tick, 30_000)
+  window.setInterval(tick, 1000)
 }
 
 const header = document.querySelector<HTMLElement>('#site-header')
