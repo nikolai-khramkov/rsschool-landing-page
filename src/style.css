@@ -208,8 +208,8 @@ p {
 }
 
 .theme-toggle {
-  --track: 64px;
-  --size: 30px;
+  --track: 50px;
+  --size: 24px;
   --border: 1.5px;
   --pad: 2px;
   --thumb: calc(var(--size) - var(--border) * 2 - var(--pad) * 2);
