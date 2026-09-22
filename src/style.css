@@ -361,22 +361,38 @@ body.nav-open .site-header {
 /* Hero */
 .hero {
   position: relative;
-  z-index: 31;
   display: flex;
   flex-direction: column;
   min-height: 90vh;
   padding-top: 60px;
   pointer-events: none;
   background: var(--bg);
+  overflow: hidden;
 }
 
 .hero-lines {
   position: absolute;
   inset: 0;
-  z-index: 0;
   overflow: visible;
   pointer-events: none;
   container-type: size;
+}
+
+.hero-lines--hero {
+  z-index: 0;
+}
+
+.hero-lines--projects {
+  left: 0;
+  right: 0;
+  top: calc(-1 * var(--hero-min-height));
+  height: var(--hero-min-height);
+  z-index: 1;
+}
+
+.hero-lines--projects .hero-line--v1,
+.hero-lines--projects .hero-line--h1 {
+  display: none;
 }
 
 .hero-line {
@@ -581,30 +597,42 @@ body.nav-open .site-header {
 }
 
 #projects {
+  --hero-min-height: 90vh;
   position: relative;
   isolation: isolate;
 }
 
-#projects::before,
-#projects::after {
+.projects-section-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.projects-section-bg::before,
+.projects-section-bg::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
-  z-index: -1;
   pointer-events: none;
 }
 
-#projects::before {
+.projects-section-bg::before {
   top: 0;
   height: 50%;
   background: var(--bg);
 }
 
-#projects::after {
+.projects-section-bg::after {
   top: 12%;
   bottom: 0;
   background: var(--bg-secondary);
+}
+
+#projects > .wrap {
+  position: relative;
+  z-index: 2;
 }
 
 .descriptor {
@@ -635,6 +663,7 @@ body.nav-open .site-header {
   top: 0;
   z-index: 2;
   margin: 0;
+  background: var(--bg);
 }
 
 .projects-note {
