@@ -865,6 +865,37 @@ body.nav-open .site-header {
   z-index: 1;
 }
 
+.card--pti::after {
+  content: none;
+}
+
+.card--pti > .card-fill {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--bg-card);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card--pti > .card-fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/images/card-noise.webp') top left / 1600px 900px;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.card--pti:hover > .card-fill {
+  transform: scale(1.08);
+}
+
+.card--pti > .card-title,
+.card--pti > .card-index,
+.card--pti > .card-meta {
+  z-index: 2;
+}
+
 .card-shot--pti {
   position: absolute;
   left: 10.15%;
@@ -874,6 +905,19 @@ body.nav-open .site-header {
   max-width: none;
   object-fit: cover;
   object-position: left top;
+  transform-origin: 62% 36%;
+  transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card--pti:hover .card-shot--pti {
+  transform: scale(1.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card--pti > .card-fill,
+  .card-shot--pti {
+    transition: none;
+  }
 }
 
 .card-round-shot {
@@ -938,7 +982,11 @@ body.nav-open .site-header {
 }
 
 .card--alicana .card-index {
-  right: -2px;
+  top: auto;
+  right: auto;
+  left: 14%;
+  bottom: 20%;
+  z-index: 2;
 }
 
 .phone {
@@ -1532,6 +1580,7 @@ html[data-theme='light'] .site-header.is-scrolled {
 
 .footer-btns {
   display: flex;
+  gap: 1px;
   width: calc(var(--col) * 2 + var(--gutter));
 }
 
