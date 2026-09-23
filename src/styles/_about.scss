@@ -1,0 +1,444 @@
+@use 'mixins' as *;
+
+.about-services {
+  position: relative;
+  z-index: 1;
+  scroll-margin-top: 80px;
+}
+
+.about-services-board {
+  --board-h: 2480;
+  --photo-left: calc(var(--col) * 5 + var(--gutter) * 5);
+  --photo-size: calc(var(--col) * 3 + var(--gutter) * 2);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  grid-template-rows:
+    [y0] minmax(0, 95fr)
+    [y95] minmax(0, 276fr)
+    [y371] minmax(0, 351fr)
+    [y722] minmax(0, 99fr)
+    [y821] minmax(0, 168fr)
+    [y989] minmax(0, 64fr)
+    [y1053] minmax(0, 304fr)
+    [y1357] minmax(0, 184fr)
+    [y1541] minmax(0, 104fr)
+    [y1645] minmax(0, 404fr)
+    [y2049] minmax(0, 168fr)
+    [y2217] minmax(0, 15fr)
+    [y2232] minmax(0, 248fr)
+    [y2480];
+  width: 100%;
+  aspect-ratio: 1480 / 2480;
+  min-height: 2480px;
+}
+
+.about-services .about,
+.about-services .services,
+.about-services .reviews {
+  display: contents;
+}
+
+.about-title,
+.descriptor--about,
+.descriptor--services,
+.descriptor--reviews,
+.about-content,
+.expertise-title,
+.reviews-title,
+.services-disclaimer,
+.services-col,
+.service-card--03,
+.service-card--06,
+.services-contact,
+.reviews-list {
+  z-index: 3;
+}
+
+.about-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.about-line {
+  position: absolute;
+  background: var(--line);
+
+  &--v1 {
+    left: calc(var(--col) * 2 + var(--gutter) * 2);
+    top: calc(36 / var(--board-h) * 100%);
+    width: 1px;
+    height: calc(2344 / var(--board-h) * 104%);
+  }
+
+  &--v2 {
+    left: 50%;
+    top: -3%;
+    width: 1px;
+    height: calc(2344 / var(--board-h) * 92%);
+  }
+
+  &--h1 {
+    left: 0;
+    top: calc(722 / var(--board-h) * 100%);
+    width: 100%;
+    height: 1px;
+  }
+
+  &--h2 {
+    left: 0;
+    top: calc(1950 / var(--board-h) * 100%);
+    width: 100%;
+    height: 1px;
+  }
+}
+
+.about-x {
+  position: absolute;
+  left: calc(var(--photo-left) - 12%);
+  top: calc(722 / var(--board-h) * 100%);
+  width: 0;
+  height: 0;
+
+  span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 220vmax;
+    height: 1px;
+    background: var(--line);
+    transform-origin: left center;
+
+    &:first-child {
+      transform: translateY(-40%) rotate(45deg);
+    }
+
+    &:last-child {
+      transform: translateY(-40%) rotate(-45deg);
+    }
+  }
+}
+
+.about-title {
+  @include place("2 / 8", y95);
+  font-size: clamp(32px, 3.75vw, 60px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  text-align: justify;
+  text-indent: calc(var(--col) + var(--gutter));
+  scroll-margin-top: 80px;
+}
+
+.descriptor--about,
+.descriptor--services,
+.descriptor--reviews {
+  justify-self: start;
+  width: max-content;
+  margin: 0;
+}
+
+.descriptor--about {
+  @include place(1, y371);
+  justify-self: start;
+  width: max-content;
+}
+
+.about-content {
+  @include place("3 / 5", y371);
+  display: grid;
+  align-content: start;
+  gap: 60px;
+}
+
+.about-copy {
+  display: grid;
+  gap: 20px;
+
+  p {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: var(--muted);
+  }
+}
+
+.about-photo {
+  @include place("6 / 9", y722);
+  z-index: 20;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.expertise-title,
+.reviews-title {
+  font-size: clamp(32px, 3.75vw, 60px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  scroll-margin-top: 80px;
+}
+
+.expertise-title {
+  @include place("3 / 5", y821);
+  text-align: justify;
+}
+
+.descriptor--services {
+  @include place(1, y989);
+  justify-self: start;
+  width: max-content;
+}
+
+.services-disclaimer {
+  @include place(1, y1053);
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: var(--muted);
+  opacity: 0.5;
+}
+
+.services-col {
+  @include place("3 / 5", y989);
+  display: grid;
+  align-content: start;
+  gap: 60px;
+
+  &--b {
+    grid-row: y1541;
+  }
+}
+
+.service-card {
+  display: grid;
+  justify-items: end;
+  align-content: start;
+  gap: 40px;
+  width: 100%;
+
+  &--03,
+  &--06 {
+    @include place("6 / 8", y1357);
+  }
+
+  &--06 {
+    grid-row: y1645;
+  }
+
+  p {
+    width: min(300px, 100%);
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    text-align: right;
+    color: var(--muted);
+    opacity: 0.5;
+  }
+}
+
+.service-card-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+  width: 100%;
+  font-size: clamp(18px, 1.5vw, 24px);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--text);
+
+  h3 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: 400;
+    text-align: right;
+    text-transform: uppercase;
+  }
+}
+
+.services-contact {
+  @include place(1, y1541);
+  display: grid;
+  align-content: start;
+  gap: 40px;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--muted);
+  opacity: 0.5;
+
+  a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+.services-contact-links {
+  display: grid;
+
+  span {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    min-height: 20px;
+  }
+}
+
+.reviews-title {
+  @include place("3 / 5", y2049);
+}
+
+.descriptor--reviews {
+  @include place(1, y2232);
+  justify-self: start;
+  width: max-content;
+}
+
+.reviews-list {
+  @include place("3 / 9", y2217);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.review-row {
+  display: grid;
+  grid-template-columns:
+    calc(var(--col) * 2 + var(--gutter) * 1.5)
+    calc(var(--col) + var(--gutter))
+    minmax(0, 1fr);
+  gap: var(--gutter);
+  align-items: center;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  font-size: 16px;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.review-client {
+  color: var(--text);
+}
+
+.review-type,
+.review-work {
+  font-weight: 300;
+  color: var(--muted);
+}
+
+.review-client,
+.review-type,
+.review-work {
+  min-width: 0;
+  white-space: nowrap;
+}
+
+@include tablet {
+  .about-services-board {
+    aspect-ratio: auto;
+    min-height: 0;
+    height: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    gap: 32px;
+    padding: 48px 0 80px;
+  }
+
+  .about-lines,
+  .about-x {
+    display: none;
+  }
+
+  .about-services .about,
+  .about-services .services,
+  .about-services .reviews {
+    display: grid;
+    align-content: start;
+    gap: 24px;
+  }
+
+  .about-title,
+  .descriptor--about,
+  .descriptor--services,
+  .descriptor--reviews,
+  .about-content,
+  .about-photo,
+  .expertise-title,
+  .reviews-title,
+  .services-disclaimer,
+  .services-col,
+  .service-card--03,
+  .service-card--06,
+  .services-contact,
+  .reviews-list {
+    position: static;
+    inset: auto;
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
+    min-height: auto;
+    transform: none;
+  }
+
+  .about-title,
+  .expertise-title,
+  .reviews-title {
+    text-indent: 0;
+    text-align: left;
+  }
+
+  .review-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 14px 0;
+  }
+
+  .review-client,
+  .review-type,
+  .review-work {
+    white-space: normal;
+  }
+
+  .about-content {
+    gap: 24px;
+  }
+
+  .about-photo {
+    width: min(360px, 70%);
+    height: auto;
+    aspect-ratio: 1;
+    justify-self: center;
+  }
+
+  .service-card-head {
+    white-space: normal;
+    font-size: 20px;
+  }
+}
+
+@include mobile {
+  .about-copy p,
+  .service-card p {
+    font-size: 16px;
+  }
+}
