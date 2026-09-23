@@ -48,19 +48,9 @@ p {
 }
 
 .wrap {
-  --content: calc(min(100vw, var(--page)) - var(--margin) * 2);
-  --col: calc((var(--content) - var(--gutter) * 7) / 8);
   width: min(100%, var(--page));
   margin-inline: auto;
   padding-inline: var(--margin);
-}
-
-.span-2 {
-  width: calc(var(--col) * 2 + var(--gutter));
-}
-
-.span-4 {
-  width: calc(var(--col) * 4 + var(--gutter) * 3);
 }
 
 .inline-padding-5 {

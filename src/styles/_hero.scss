@@ -128,7 +128,7 @@
 }
 
 .hero-aside {
-  grid-column: 1 / -1;
+  grid-column: 5 / -1;
   grid-row: 1;
   justify-self: end;
   align-self: start;
@@ -136,7 +136,7 @@
   align-content: space-between;
   justify-items: end;
   width: max-content;
-  max-width: calc(var(--col) * 4 + var(--gutter) * 3);
+  max-width: 100%;
   min-height: 50vh;
 }
 

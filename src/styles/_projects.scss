@@ -666,11 +666,6 @@ html[data-theme='light'] .btn-pill img {
   .projects-cta {
     width: min(280px, 100%);
   }
-
-  .span-4,
-  .span-2 {
-    width: 100%;
-  }
 }
 
 @include mobile {
