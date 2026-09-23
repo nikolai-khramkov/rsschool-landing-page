@@ -93,7 +93,8 @@
               <label
                 class="drawer-overlay"
                 for="topnav-drawer"
-              ><span class="sr-only">Закрыть меню</span></label>
+                aria-label="Закрыть меню"
+              ></label>
               <nav class="drawer-panel" aria-label="Мобильная навигация">
                 <a href="#projects">Проекты</a>
                 <a href="#about">Обо мне</a>
@@ -388,13 +389,6 @@
             <div class="about-lines" aria-hidden="true">
               <span class="about-line about-line--v1"></span>
               <span class="about-line about-line--v2"></span>
-              <span class="about-line about-line--h1"></span>
-              <span class="about-line about-line--h2"></span>
-              <span class="about-line about-line--h3"></span>
-              <span class="about-x">
-                <span></span>
-                <span></span>
-              </span>
             </div>
 
             <section class="about">
@@ -432,6 +426,15 @@
                   />
                 </a>
               </div>
+            </section>
+
+            <div class="about-bridge">
+              <span class="about-line about-line--h" aria-hidden="true"></span>
+              <span class="about-x" aria-hidden="true">
+                <span></span>
+                <span></span>
+              </span>
+              <h2 class="expertise-title inline-padding-5" id="services">Моя экспертиза</h2>
               <img
                 class="about-photo"
                 src="/images/about-photo.webp"
@@ -439,10 +442,9 @@
                 height="548"
                 alt="Юрий Угаров"
               />
-            </section>
+            </div>
 
             <section class="services">
-              <h2 class="expertise-title inline-padding-5" id="services">Моя экспертиза</h2>
               <p class="descriptor descriptor--services">
                 <img
                   src="/images/icon-services.svg"
@@ -460,51 +462,26 @@
                 </span>
               </p>
 
-              <div class="services-col services-col--a inline-padding-5">
-                <article class="service-card">
-                  <div class="service-card-head">
-                    <span>[01]</span>
-                    <h3>лендинг</h3>
-                  </div>
-                  <p>
-                    Разработка одностраничного сайта под ключ и по отдельным
-                    этапам
-                  </p>
-                </article>
-                <article class="service-card">
-                  <div class="service-card-head">
-                    <span>[02]</span>
-                    <h3>Корпоративный сайт</h3>
-                  </div>
-                  <p>
-                    Разработка многостраничного/корпоративного сайта под ключ и
-                    по отдельным этапам
-                  </p>
-                </article>
-              </div>
-
-              <div class="services-col services-col--b inline-padding-5">
-                <article class="service-card">
-                  <div class="service-card-head">
-                    <span>[04]</span>
-                    <h3>Дизайн упаковки</h3>
-                  </div>
-                  <p>
-                    Разработка дизайна упаковки для продуктов, подготовка к
-                    печати
-                  </p>
-                </article>
-                <article class="service-card">
-                  <div class="service-card-head">
-                    <span>[05]</span>
-                    <h3>Фирменный стиль</h3>
-                  </div>
-                  <p>
-                    Разработка логотипа и элементов фирменного стиля бренда
-                  </p>
-                </article>
-              </div>
-
+              <article class="service-card service-card--01">
+                <div class="service-card-head">
+                  <span>[01]</span>
+                  <h3>лендинг</h3>
+                </div>
+                <p>
+                  Разработка одностраничного сайта под ключ и по отдельным
+                  этапам
+                </p>
+              </article>
+              <article class="service-card service-card--02">
+                <div class="service-card-head">
+                  <span>[02]</span>
+                  <h3>Корпоративный сайт</h3>
+                </div>
+                <p>
+                  Разработка многостраничного/корпоративного сайта под ключ и
+                  по отдельным этапам
+                </p>
+              </article>
               <article class="service-card service-card--03">
                 <div class="service-card-head">
                   <span>[03]</span>
@@ -514,7 +491,25 @@
                   Разработка интернет-магазина под ключ и по отдельным этапам
                 </p>
               </article>
-
+              <article class="service-card service-card--04">
+                <div class="service-card-head">
+                  <span>[04]</span>
+                  <h3>Дизайн упаковки</h3>
+                </div>
+                <p>
+                  Разработка дизайна упаковки для продуктов, подготовка к
+                  печати
+                </p>
+              </article>
+              <article class="service-card service-card--05">
+                <div class="service-card-head">
+                  <span>[05]</span>
+                  <h3>Фирменный стиль</h3>
+                </div>
+                <p>
+                  Разработка логотипа и элементов фирменного стиля бренда
+                </p>
+              </article>
               <article class="service-card service-card--06">
                 <div class="service-card-head">
                   <span>[06]</span>
