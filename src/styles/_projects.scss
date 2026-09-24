@@ -471,37 +471,35 @@
   letter-spacing: -0.48px;
 }
 
-.phone {
+.card > .iphone {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 29%;
-  aspect-ratio: 213 / 442;
-  overflow: hidden;
-  border: 4px solid #000000;
-  border-radius: 34px;
-  background: #f3f2ed;
-  box-shadow:
-    3.5px 3.5px 44px rgba(0, 0, 0, 0.35),
-    5.3px 5.3px 13px rgba(0, 0, 0, 0.25);
+  width: 34%;
+}
 
-  img {
-    width: 100%;
-    height: 100%;
+.iphone {
+  aspect-ratio: 1000 / 1923;
+
+  &-screen {
+    position: absolute;
+    left: 3.6%;
+    top: 5.096%;
+    width: 79.5%;
+    height: 89.55%;
     object-fit: cover;
     object-position: center top;
+    border-radius: 14% / 6.4%;
   }
 
-  &-notch {
+  &-frame {
     position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 29%;
-    height: 18px;
-    background: #000;
-    border-radius: 20px;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    pointer-events: none;
   }
 
   &--sm {
@@ -510,27 +508,10 @@
     top: auto;
     transform: none;
     width: 100%;
-    aspect-ratio: 145.159 / 296.63;
-    border: 4px solid #000000;
-    border-radius: 23.67px;
-    background: #f3f2ed;
-    box-shadow:
-      1.4px 1.4px 4.9px rgba(0, 0, 0, 0.25),
-      2.8px 2.8px 7px rgba(0, 0, 0, 0.15);
+  }
 
-    .phone-notch {
-      top: 8px;
-      width: 32%;
-      height: 12px;
-    }
-
-    img {
-      object-position: center top;
-    }
-
-    .phone-mid {
-      object-position: center 18%;
-    }
+  &-screen--mid {
+    object-position: center 18%;
   }
 }
 
@@ -555,7 +536,7 @@
   }
 }
 
-.phones {
+.card > .phones {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -565,7 +546,7 @@
   align-items: center;
   justify-content: center;
   gap: 3.28%;
-  width: 63.3%;
+  width: 73%;
 }
 
 .btn-pill {
