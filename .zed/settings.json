@@ -1,0 +1,57 @@
+{
+  "languages": {
+    "Vue.js": {
+      "formatter": [
+        { "code_action": "source.fixAll.eslint" }
+      ],
+      "format_on_save": "on",
+      "tab_size": 2
+    },
+    "TypeScript": {
+      "formatter": [
+        { "code_action": "source.fixAll.eslint" }
+      ],
+      "format_on_save": "on",
+      "tab_size": 2
+    },
+    "JavaScript": {
+      "formatter": [
+        { "code_action": "source.fixAll.eslint" }
+      ],
+      "format_on_save": "on",
+      "tab_size": 2
+    },
+    "HTML": {
+        "enable_language_server": true,
+        "show_completions_on_input": true,
+        "show_completion_documentation": true
+      },
+    "CSS": {
+      "language_servers": [
+        "tailwindcss-intellisense-css",
+        "!vscode-css-language-server",
+        "..."
+      ]
+    }
+  },
+
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "includeLanguages": {
+          "vue": "html"
+        },
+        "experimental": {
+          "classRegex": [
+            "class=\"([^\"]*)\"",
+            "class='([^']*)'",
+            ":class=\"([^\"]*)\"",
+            ":class='([^']*)'"
+          ]
+        }
+      }
+    }
+  },
+
+  "semantic_tokens": "combined",
+}

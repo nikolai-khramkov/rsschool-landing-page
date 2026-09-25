@@ -1,0 +1,483 @@
+@use 'mixins' as *;
+
+.about-services {
+  position: relative;
+  z-index: 1;
+  scroll-margin-top: 80px;
+}
+
+.about-services-board {
+  position: relative;
+  display: grid;
+  gap: clamp(48px, 6vw, 96px);
+  padding-block: clamp(48px, 6vw, 96px);
+}
+
+.about,
+.about-bridge,
+.services,
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  align-items: start;
+}
+
+.about-title,
+.descriptor--about,
+.descriptor--services,
+.descriptor--reviews,
+.about-content,
+.expertise-title,
+.reviews-title,
+.services-disclaimer,
+.service-card,
+.services-contact,
+.reviews-list {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.about-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about-line {
+  position: absolute;
+  background: var(--line);
+
+  &--v1,
+  &--v2 {
+    top: 0;
+    bottom: 0;
+    width: 1px;
+  }
+
+  &--v1 {
+    left: calc(2 * (100% - 7 * var(--gutter)) / 8 + 2 * var(--gutter));
+  }
+
+  &--v2 {
+    left: 50%;
+  }
+
+  &--h {
+    position: relative;
+    grid-column: 1 / -1;
+    grid-row: 1 / span 2;
+    align-self: center;
+    height: 1px;
+    z-index: 0;
+  }
+}
+
+.about-x {
+  position: relative;
+  z-index: 2;
+  grid-column: 5;
+  grid-row: 1 / span 2;
+  justify-self: start;
+  align-self: center;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+
+  span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 220vmax;
+    height: 1px;
+    background: var(--line);
+    transform-origin: left center;
+
+    &:first-child {
+      transform: translateY(-40%) rotate(45deg);
+    }
+
+    &:last-child {
+      transform: translateY(-40%) rotate(-45deg);
+    }
+  }
+}
+
+.about {
+  row-gap: clamp(40px, 5vw, 80px);
+}
+
+.about-title {
+  grid-column: 2 / 8;
+  font-size: clamp(32px, 3.75vw, 60px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  text-align: justify;
+  text-indent: calc((100% - 5 * var(--gutter)) / 6 + var(--gutter));
+  scroll-margin-top: 80px;
+}
+
+.descriptor--about,
+.descriptor--services,
+.descriptor--reviews {
+  grid-column: 1;
+  justify-self: start;
+  width: max-content;
+  margin: 0;
+}
+
+.about-content {
+  grid-column: 3 / 5;
+  grid-row: 2;
+  display: grid;
+  align-content: start;
+  gap: 60px;
+}
+
+.descriptor--about {
+  grid-row: 2;
+}
+
+.about-copy {
+  display: grid;
+  gap: 20px;
+
+  p {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: var(--muted);
+  }
+}
+
+.about-bridge {
+  align-items: stretch;
+}
+
+.about-photo {
+  grid-column: 6 / 9;
+  grid-row: 1 / span 2;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.expertise-title,
+.reviews-title {
+  font-size: clamp(32px, 3.75vw, 60px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  scroll-margin-top: 80px;
+}
+
+.expertise-title {
+  grid-column: 3 / 5;
+  grid-row: 1 / span 2;
+  align-self: end;
+  margin-bottom: clamp(24px, 3vw, 48px);
+}
+
+.services {
+  row-gap: clamp(32px, 4vw, 60px);
+}
+
+.descriptor--services {
+  grid-row: 1;
+}
+
+.services-disclaimer {
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: var(--muted);
+  opacity: 0.5;
+}
+
+.service-card {
+  display: grid;
+  justify-items: end;
+  align-content: start;
+  gap: 40px;
+  width: 100%;
+
+  &--01,
+  &--02,
+  &--04,
+  &--05 {
+    grid-column: 3 / 5;
+  }
+
+  &--01 {
+    grid-row: 1;
+  }
+
+  &--02 {
+    grid-row: 2;
+  }
+
+  &--03,
+  &--06 {
+    grid-column: 6 / 8;
+    align-self: end;
+  }
+
+  &--03 {
+    grid-row: 2;
+  }
+
+  &--04 {
+    grid-row: 3;
+  }
+
+  &--05 {
+    grid-row: 4;
+  }
+
+  &--06 {
+    grid-row: 4;
+  }
+
+  p {
+    width: min(300px, 100%);
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    text-align: right;
+    color: var(--muted);
+    opacity: 0.5;
+  }
+}
+
+.service-card-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+  width: 100%;
+  font-size: clamp(18px, 1.5vw, 24px);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--text);
+
+  h3 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: 400;
+    text-align: right;
+    text-transform: uppercase;
+  }
+}
+
+.services-contact {
+  grid-column: 1;
+  grid-row: 3 / span 2;
+  display: grid;
+  align-content: start;
+  gap: 40px;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--muted);
+  opacity: 0.5;
+
+  a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+.services-contact-links {
+  display: grid;
+
+  span {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    min-height: 20px;
+  }
+}
+
+.reviews {
+  row-gap: clamp(24px, 3vw, 48px);
+  padding-top: clamp(24px, 3vw, 48px);
+  border-top: 1px solid var(--line);
+}
+
+.reviews-title {
+  grid-column: 3 / 5;
+}
+
+.descriptor--reviews {
+  grid-row: 2;
+}
+
+.reviews-list {
+  grid-column: 3 / -1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: subgrid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.review-row {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  align-items: center;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  font-size: 16px;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.review-client {
+  grid-column: 1 / 3;
+  color: var(--text);
+}
+
+.review-type {
+  grid-column: 3;
+}
+
+.review-work {
+  grid-column: 4 / -1;
+}
+
+.review-type,
+.review-work {
+  font-weight: 300;
+  color: var(--muted);
+}
+
+.review-client,
+.review-type,
+.review-work {
+  min-width: 0;
+  white-space: nowrap;
+}
+
+@include tablet {
+  .about-services-board {
+    gap: 32px;
+    padding: 48px 0 80px;
+  }
+
+  .about-lines,
+  .about-x,
+  .about-line--h {
+    display: none;
+  }
+
+  .about,
+  .about-bridge,
+  .services,
+  .reviews {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 24px;
+    align-content: start;
+  }
+
+  .reviews {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .about-title,
+  .descriptor--about,
+  .descriptor--services,
+  .descriptor--reviews,
+  .about-content,
+  .about-photo,
+  .expertise-title,
+  .reviews-title,
+  .services-disclaimer,
+  .service-card,
+  .services-contact,
+  .reviews-list {
+    grid-column: auto;
+    grid-row: auto;
+    align-self: stretch;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .about-title,
+  .expertise-title,
+  .reviews-title {
+    text-indent: 0;
+    text-align: left;
+  }
+
+  .reviews-list {
+    grid-template-columns: none;
+  }
+
+  .review-row {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 14px 0;
+  }
+
+  .review-client,
+  .review-type,
+  .review-work {
+    grid-column: auto;
+    white-space: normal;
+  }
+
+  .about-content {
+    gap: 24px;
+  }
+
+  .about-photo {
+    width: min(360px, 70%);
+    height: auto;
+    aspect-ratio: 1;
+    justify-self: center;
+  }
+
+  .service-card {
+    justify-items: start;
+
+    p,
+    h3 {
+      text-align: left;
+    }
+  }
+
+  .service-card-head {
+    white-space: normal;
+    font-size: 20px;
+  }
+}
+
+@include mobile {
+  .about-copy p,
+  .service-card p {
+    font-size: 16px;
+  }
+}
