@@ -343,11 +343,11 @@
 .card-shot--pti {
   position: absolute;
   left: 10.15%;
-  top: 10%;
-  width: 96.11%;
-  height: 109.5%;
+  top: 15%;
+  width: 90%;
+  height: 100%;
   max-width: none;
-  object-fit: cover;
+  object-fit: contain;
   object-position: left top;
   transform-origin: 62% 36%;
   transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
@@ -658,7 +658,7 @@ html[data-theme='light'] .btn-pill img {
 
   .card-shot--pti {
     width: 90%;
-    top: 18%;
+    top: 27%;
   }
 
   .tag {
