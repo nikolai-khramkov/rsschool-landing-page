@@ -515,24 +515,50 @@
   }
 }
 
-.tablet {
+.card > .tablet {
   position: absolute;
   left: 50%;
   top: 48%;
   transform: translate(-50%, -50%);
-  width: 68%;
-  aspect-ratio: 246 / 178;
-  overflow: hidden;
-  border: 6px solid #0b0b0b;
-  border-radius: 10px;
-  box-shadow:
-    0 4px 4px rgba(0, 0, 0, 0.25),
-    0 4px 24px rgba(0, 0, 0, 0.25);
+  width: 72%;
+}
 
-  img {
+.tablet {
+  aspect-ratio: 1600 / 1224;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    left: 10%;
+    right: 10%;
+    bottom: -8%;
+    height: 16%;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.38);
+    filter: blur(12px);
+    pointer-events: none;
+  }
+
+  &-screen {
+    position: absolute;
+    z-index: 1;
+    left: 3.5%;
+    top: 4.657%;
+    width: 93.25%;
+    height: 91.176%;
+    object-fit: cover;
+    border-radius: 1.4% / 1.8%;
+  }
+
+  &-frame {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
+    pointer-events: none;
   }
 }
 

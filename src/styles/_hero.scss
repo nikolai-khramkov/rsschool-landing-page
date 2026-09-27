@@ -164,6 +164,7 @@
     inset: 0.8%;
     width: auto;
     height: auto;
+    transition: transform 5s ease-in-out;
   }
 
   span {
@@ -172,6 +173,10 @@
     letter-spacing: -0.04em;
     line-height: 1;
   }
+}
+
+.award:hover .award-badge img {
+  transform: rotate(360deg);
 }
 
 .award-text {
