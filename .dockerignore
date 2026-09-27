@@ -1,0 +1,12 @@
+.git
+.gitignore
+.vscode
+.zed
+node_modules
+dist
+dist-ssr
+*.md
+*.local
+.env*
+.DS_Store
+codebook.toml

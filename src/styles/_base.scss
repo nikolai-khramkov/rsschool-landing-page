@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-weight: 400;
+  color: var(--text);
+  background: var(--bg-secondary);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.page {
+  overflow-x: clip;
+  overflow-y: clip;
+  background: var(--bg-secondary);
+}
+
+.wrap {
+  width: min(100%, var(--page));
+  margin-inline: auto;
+  padding-inline: var(--margin);
+}
+
+.inline-padding-5 {
+  padding-inline: 5px;
+}
+
+.inline-padding-10 {
+  padding-inline: 10px;
+}
+
+.inline-padding-15 {
+  padding-inline: 15px;
+}
+
+.inline-padding-20 {
+  padding-inline: 20px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

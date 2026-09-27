@@ -1,0 +1,40 @@
+{
+	"prettier.enable": false,
+	"editor.formatOnSave": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "never"
+	},
+	"[html]": {
+		"editor.quickSuggestions": {
+			"other": "on",
+			"comments": "off",
+			"strings": "on"
+		}
+	},
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"vue"
+	],
+	"[vue]": {
+		"editor.defaultFormatter": null
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": null
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": null
+	},
+	"cSpell.words": [
+		"Промтехизыскания",
+		"Behance",
+		"Dprofile",
+		"hline",
+		"Ugarov",
+		"ugarovpro",
+		"vline"
+	]
+}
