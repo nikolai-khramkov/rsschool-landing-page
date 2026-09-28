@@ -149,15 +149,29 @@
   left: ux(521.96);
   top: uy(32.22);
   width: ux(277.092);
-  height: uy(574.59);
+  aspect-ratio: 1000 / 1923;
+}
+
+.lawyer-phone__screen {
+  position: absolute;
+  left: 3.6%;
+  top: 4.992%;
+  width: 79.7%;
+  height: 89.86%;
   overflow: hidden;
-  border: ux(5.753) solid #000;
-  border-radius: ux(43.954);
+  border-radius: 11% / 5.2%;
   background: #000;
-  box-shadow:
-    ux(4.6) uy(4.6) ux(57.5) rgba(0, 0, 0, 0.35),
-    ux(6.9) uy(6.9) ux(17.3) rgba(0, 0, 0, 0.25);
   container-type: size;
+}
+
+.iphone-frame {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  pointer-events: none;
 }
 
 .lawyer-phone__photo {
@@ -176,8 +190,7 @@
 .lawyer-phone__kicker,
 .lawyer-phone__place,
 .lawyer-phone__name,
-.lawyer-phone__contacts,
-.lawyer-phone__island {
+.lawyer-phone__contacts {
   position: absolute;
   z-index: 1;
 }
@@ -240,15 +253,6 @@
   font-size: lx(10.776);
 }
 
-.lawyer-phone__island {
-  left: lx(92.41);
-  top: ly(14.76);
-  width: lx(80.583);
-  height: ly(24.908);
-  border-radius: lx(44);
-  background: #000;
-}
-
 .case-bg--dyson {
   inset: 0;
   width: 100%;
@@ -286,36 +290,22 @@
 .case-device {
   position: relative;
   width: ux(233.915);
-  aspect-ratio: 233.915 / 481.812;
-  overflow: hidden;
-  border-radius: ux(38);
-  background: #f3f2ed;
-  box-shadow:
-    ux(2.3) uy(2.3) ux(8) rgba(0, 0, 0, 0.25),
-    ux(4.5) uy(4.5) ux(11) rgba(0, 0, 0, 0.15);
+  aspect-ratio: 1000 / 1923;
 }
 
 .case-device__screen {
   position: absolute;
-  left: 4.35%;
-  top: 2.9%;
-  width: 91.3%;
-  height: 94.9%;
+  left: 3.6%;
+  top: 4.992%;
+  width: 79.7%;
+  height: 89.86%;
   object-fit: cover;
   object-position: center top;
-  border-radius: 11% / 5%;
+  border-radius: 11% / 5.2%;
 }
 
 .case-device:nth-child(2) .case-device__screen {
   object-position: center 36%;
-}
-
-.case-device__frame {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
 }
 
 .case-bg--car {
@@ -352,52 +342,31 @@
   z-index: 3;
   top: uy(33);
   width: ux(242.993);
-  height: uy(489);
-  overflow: hidden;
-  border: ux(3.037) solid #fff;
-  border-radius: ux(18.224);
-  background: #000;
-  box-shadow:
-    ux(2.7) uy(2.7) ux(9.4) rgba(0, 0, 0, 0.25),
-    ux(5.4) uy(5.4) ux(13.4) rgba(0, 0, 0, 0.15);
+  aspect-ratio: 1000 / 1923;
+}
 
-  img {
-    position: absolute;
-    left: 1.4%;
-    top: 0.9%;
-    width: 94.7%;
-    height: auto;
-    max-width: none;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    left: 27%;
-    bottom: 2.8%;
-    width: 44%;
-    height: ux(3);
-    border-radius: 20px;
-    background: #fff;
-  }
+.tune-phone__screen {
+  position: absolute;
+  left: 3.6%;
+  top: 4.992%;
+  width: 79.7%;
+  height: 89.86%;
+  object-fit: cover;
+  border-radius: 11% / 5.2%;
 }
 
 .tune-phone--left {
   left: ux(781);
 
-  img {
-    top: -137%;
-    height: 258%;
-    object-fit: cover;
+  .tune-phone__screen {
+    object-position: center 72%;
   }
 }
 
 .tune-phone--right {
   left: ux(1066.85);
 
-  img {
-    height: 500%;
-    object-fit: cover;
+  .tune-phone__screen {
     object-position: center top;
   }
 }
