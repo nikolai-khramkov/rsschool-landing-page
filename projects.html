@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Юрий Угаров — UX/UI дизайнер</title>
+    <title>Проекты — Юрий Угаров</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Onest:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://api.fontshare.com/v2/css?f[]=lack@400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./src/styles/main.scss" />
     <script>
       try {
@@ -23,7 +24,7 @@
   <body>
     <header class="site-header" id="site-header">
       <div class="wrap header">
-        <a class="logo" href="#top">Ugarov</a>
+        <a class="logo" href="index.html">Ugarov</a>
         <div class="header-end">
           <p class="meta-line">
             <span>г. Нижний Новгород</span>
@@ -58,8 +59,8 @@
             </button>
           </div>
           <nav class="nav nav--desktop" aria-label="Основная навигация">
-            <a class="nav-link" href="#projects">Проекты</a>
-            <a class="nav-link" href="#about">Обо мне</a>
+            <a class="nav-link" href="#projects" aria-current="page">Проекты</a>
+            <a class="nav-link" href="index.html#about">Обо мне</a>
             <a class="nav-link" href="#contacts">Контакты</a>
           </nav>
 
@@ -97,7 +98,7 @@
               ></label>
               <nav class="drawer-panel" aria-label="Мобильная навигация">
                 <a href="#projects">Проекты</a>
-                <a href="#about">Обо мне</a>
+                <a href="index.html#about">Обо мне</a>
                 <a href="#contacts">Контакты</a>
               </nav>
             </div>
@@ -176,425 +177,80 @@
         </div>
       </div>
 
-      <section class="section projects">
+      <section class="cases" aria-label="Кейсы">
         <div class="wrap">
-          <div class="projects-board">
-            <p class="descriptor">
-              <img
-                src="/images/icon-projects.svg"
-                width="24"
-                height="24"
-                alt=""
-              />
-              Свежие кейсы
-            </p>
-
-            <p class="projects-note projects-note--a">
-              В своих проектах я применяю не только свой дизайнерский опыт, но и
-              маркетинговый.
-            </p>
-            <p class="projects-note projects-note--b">
-              Это позволяет добиться максимальной эффективности.
-            </p>
-            <p class="projects-note projects-note--c">
-              В своих проектах я применяю не только свой дизайнерский опыт, но и
-              маркетинговый.
-            </p>
-            <p class="projects-note projects-note--d">
-              Это позволяет добиться максимальной эффективности.
-            </p>
-
-            <a class="card card--pti" href="#projects">
-              <span class="card-fill" aria-hidden="true"></span>
-              <span class="card-title">[ Промтехизыскания ]</span>
-              <span class="card-index">01</span>
-              <span class="card-mark card-mark--pti">PTI</span>
-
-              <img
-                class="card-shot card-shot--pti"
-                src="/images/pti-mockup2.webp"
-                alt="Макет сайта Промтехизыскания"
-              />
-
-              <!-- <svg
-                class="card-shot card-shot--pti"
-                viewBox="0 0 1447 1087"
-                role="img"
-                aria-label="Макет сайта Промтехизыскания"
-              >
-                <foreignObject x="0" y="0" width="1447" height="1087">
-                  <div class="pti-screen">
-                    <img
-                      class="pti-site"
-                      src="/images/pti-site.webp"
-                      alt=""
-                    />
-                  </div>
-                </foreignObject>
-                <image
-                  href="/images/pti-mockup.webp"
-                  width="1447"
-                  height="1087"
-                />
-              </svg> -->
-              <span class="card-meta">
-                <span class="tags">
-                  <span class="tag">Веб-дизайн</span>
-                  <span class="tag">Корпоративный сайт</span>
-                </span>
-                <span class="card-year">2023</span>
-              </span>
-            </a>
-
-            <a class="card card--nick" href="#projects">
-              <span class="card-title">[ Юрист Ник Фомин ]</span>
-              <span class="card-index">02</span>
-              <span class="iphone">
-                <img
-                  class="iphone-screen"
-                  src="/images/nick-photo.webp"
-                  alt="Мобильный сайт Ника Фомина"
-                />
-                <img class="iphone-frame" src="/images/mokup-iphone.webp" alt="" />
-              </span>
-              <span class="card-meta">
-                <span class="tags">
-                  <span class="tag">Веб-дизайн</span>
-                  <span class="tag">Сайт-визитка</span>
-                </span>
-                <span class="card-year">2022</span>
-              </span>
-            </a>
-
-            <div class="card-slot card-slot--alicana">
-              <span class="card-index">03</span>
-              <a class="card card--circle card--alicana" href="#projects">
-                <img
-                  class="card-product card-product--alicana"
-                  src="/images/alicana.webp"
-                  alt="Упаковка Alicana CBD"
-                />
-                <svg class="card-arc" viewBox="0 0 176 176" aria-hidden="true">
-                  <path
-                    id="arc-alicana"
-                    fill="none"
-                    d="M 22 88 A 66 66 0 0 1 154 88 A 66 66 0 0 1 22 88"
-                  />
-                  <text>
-                    <textPath href="#arc-alicana" startOffset="12%">
-                      <tspan fill="#fff">[ ALICANA CBD ]</tspan>
-                      <tspan fill="#878787"> — УПАКОВКА — 2021</tspan>
-                    </textPath>
-                  </text>
-                </svg>
-              </a>
-            </div>
-
-            <a class="card card--octava" href="#projects">
-              <span class="card-title">[ Октава ]</span>
-              <span class="card-index">06</span>
-              <img
-                class="card-round-shot"
-                src="/images/octava.webp"
-                alt="Ноутбук с сайтом Октава"
-              />
-              <span class="card-meta">
-                <span class="tags">
-                  <span class="tag">Веб-дизайн</span>
-                  <span class="tag">Корпоративный сайт</span>
-                </span>
-                <span class="card-year">2021</span>
-              </span>
-            </a>
-
-            <a class="card card--rwb" href="#projects">
-              <span class="card-title">[ RWB ]</span>
-              <span class="card-index">04</span>
-              <span class="tablet">
-                <img
-                  class="tablet-screen"
-                  src="/images/rwb-overlay.webp"
-                  alt="Сайт RWB"
-                />
-                <img class="tablet-frame" src="/images/IpadPro.webp" alt="" />
-              </span>
-              <span class="card-meta">
-                <span class="tags">
-                  <span class="tag">Веб-дизайн</span>
-                  <span class="tag">Корпоративный сайт</span>
-                </span>
-                <span class="card-year">2022</span>
-              </span>
-            </a>
-
-            <a class="card card--dyson" href="#projects">
-              <span class="card-title">[ Dyson ]</span>
-              <span class="card-index">05</span>
-              <span class="card-mark card-mark--dy">DY</span>
-              <span class="phones">
-                <span class="iphone iphone--sm">
-                  <img class="iphone-screen" src="/images/dyson/1.webp" alt="" />
-                  <img class="iphone-frame" src="/images/mokup-iphone.webp" alt="" />
-                </span>
-                <span class="iphone iphone--sm">
-                  <img
-                    class="iphone-screen iphone-screen--mid"
-                    src="/images/dyson/2.webp"
-                    alt=""
-                  />
-                  <img class="iphone-frame" src="/images/mokup-iphone.webp" alt="" />
-                </span>
-                <span class="iphone iphone--sm">
-                  <img
-                    class="iphone-screen"
-                    src="/images/dyson/3.webp"
-                    alt="Интернет-магазин Dyson"
-                  />
-                  <img class="iphone-frame" src="/images/mokup-iphone.webp" alt="" />
-                </span>
-              </span>
-              <span class="card-meta">
-                <span class="tags">
-                  <span class="tag">Веб-дизайн</span>
-                  <span class="tag">Интернет-магазин</span>
-                </span>
-                <span class="card-year">2022</span>
-              </span>
-            </a>
-
-            <div class="card-slot card-slot--landing">
-              <span class="card-index">07</span>
-              <a class="card card--circle card--landing" href="#projects">
-                <img
-                  class="card-product card-product--landing"
-                  src="/images/landing-phones.webp"
-                  alt="Мокап лендинга автоматизации"
-                />
-                <svg class="card-arc" viewBox="0 0 176 176" aria-hidden="true">
-                  <path
-                    id="arc-landing"
-                    fill="none"
-                    d="M 22 88 A 66 66 0 1 1 22 88.01"
-                  />
-                  <text>
-                    <textPath href="#arc-landing" startOffset="8%">
-                      <tspan fill="#fff">[ СЕРВИСЫ АВТОМАТИЗАЦИИ БИЗНЕСА ]</tspan>
-                      <tspan fill="#878787"> — ЛЕНДИНГ — 2023</tspan>
-                    </textPath>
-                  </text>
-                </svg>
-              </a>
-            </div>
-
-            <div class="projects-cta">
-              <p class="projects-note">
-                Ты только посмотри какие красивые проекты! Жми на кнопку — там
-                их ещё больше увидишь ты :)
+          <ul class="cases-list">
+            <li class="case case--lawyer">
+              <img class="case-bg case-bg--lawyer" src="/images/cases/lawyer-bg.png" alt="" />
+              <img class="case-mark" src="/images/cases/nk-mark.svg" width="958" height="547" alt="" />
+              <div class="lawyer-phone">
+                <img class="lawyer-phone__photo" src="/images/cases/lawyer-photo.png" alt="" />
+                <img class="lawyer-phone__logo" src="/images/cases/lawyer-logo.svg" width="31" height="18" alt="" />
+                <img class="lawyer-phone__menu" src="/images/cases/lawyer-menu.svg" width="31" height="31" alt="" />
+                <p class="lawyer-phone__kicker">
+                  Лучший юрист digital сферы по мнению клиентов<br />
+                  <a href="#projects">смотри отзывы</a>
+                </p>
+                <p class="lawyer-phone__place">
+                  Сижу в Москве<br />
+                  Работаю по всей стране
+                </p>
+                <p class="lawyer-phone__name">
+                  Ник Фомин<br />
+                  юрист продюсеров, маркетологов и&nbsp;экспертов
+                </p>
+                <p class="lawyer-phone__contacts">
+                  @dogovornick<br />
+                  nick@dogovornick.ru
+                </p>
+                <span class="lawyer-phone__island" aria-hidden="true"></span>
+              </div>
+              <h2 class="case-title">Сайт для<br />юриста</h2>
+              <p class="case-meta">
+                <span>Ux/ui design</span>
+                <span>Corporate site</span>
+                <span>Late 2022</span>
               </p>
-              <a class="btn-pill btn-pill--sm" href="#projects">
-                Смотри тут ещё
-                <img src="/images/icon-eye.svg" width="40" height="20" alt="" />
+              <a class="case-cta" href="#projects">
+                смотреть
+                <img src="/images/cases/eye.svg" width="95" height="49" alt="" />
               </a>
-            </div>
-          </div>
+            </li>
+
+            <li class="case case--dyson">
+              <img class="case-bg case-bg--dyson" src="/images/cases/dyson-bg.jpg" alt="" />
+              <img class="case-bg case-bg--dyson-wash" src="/images/cases/dyson-wash.jpg" alt="" />
+              <span class="case-noise" aria-hidden="true"></span>
+              <h2 class="case-title">Интернет-магазин техники Dyson</h2>
+              <div class="case-phones">
+                <div class="case-device">
+                  <img class="case-device__screen" src="/images/dyson/1.webp" alt="" />
+                  <img class="case-device__frame" src="/images/cases/phone-frame.svg" width="234" height="482" alt="" />
+                </div>
+                <div class="case-device">
+                  <img class="case-device__screen" src="/images/dyson/2.webp" alt="" />
+                  <img class="case-device__frame" src="/images/cases/phone-frame.svg" width="234" height="482" alt="" />
+                </div>
+                <div class="case-device">
+                  <img class="case-device__screen" src="/images/dyson/3.webp" alt="Интернет-магазин техники Dyson" />
+                  <img class="case-device__frame" src="/images/cases/phone-frame.svg" width="234" height="482" alt="" />
+                </div>
+              </div>
+            </li>
+
+            <li class="case case--tune">
+              <img class="case-bg case-bg--car" src="/images/cases/car-bg.png" alt="" />
+              <h2 class="case-title">Сайт для<br />ателье тюнинга</h2>
+              <div class="tune-phone tune-phone--left">
+                <img src="/images/cases/tune-shot-2.png" alt="" />
+              </div>
+              <div class="tune-phone tune-phone--right">
+                <img src="/images/cases/tune-screen-b.png" alt="Сайт ателье тюнинга" />
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
-
-      <div class="about-services" id="about">
-        <div class="wrap">
-          <div class="about-services-board">
-            <div class="about-lines" aria-hidden="true">
-              <span class="about-line about-line--v1"></span>
-              <span class="about-line about-line--v2"></span>
-            </div>
-
-            <section class="about">
-              <h2 class="about-title">
-                Проектирование, а не просто рисование красивых картинок — это
-                мой подход к&nbsp;работе над дизайном интерфейсов
-              </h2>
-              <p class="descriptor descriptor--about">
-                <img
-                  src="/images/icon-about.svg"
-                  width="24"
-                  height="24"
-                  alt=""
-                />
-                Про меня
-              </p>
-              <div class="about-content inline-padding-5">
-                <div class="about-copy">
-                  <p>
-                    В основе подхода здравый смысл и польза, инженерная эстетика
-                    без перегрузки графикой и&nbsp;внимание к&nbsp;деталям.
-                  </p>
-                  <p>
-                    Я разрабатываю дизайн цифровых продуктов ориентированный на
-                    решение задач бизнеса и&nbsp;маркетинга.
-                  </p>
-                </div>
-                <a class="btn-pill btn-pill--about" href="#about">
-                  Читай тут про меня
-                  <img
-                    src="/images/icon-eye.svg"
-                    width="40"
-                    height="20"
-                    alt=""
-                  />
-                </a>
-              </div>
-            </section>
-
-            <div class="about-bridge">
-              <span class="about-line about-line--h" aria-hidden="true"></span>
-              <span class="about-x" aria-hidden="true">
-                <span></span>
-                <span></span>
-              </span>
-              <h2 class="expertise-title inline-padding-5" id="services">Моя экспертиза</h2>
-              <img
-                class="about-photo"
-                src="/images/about-photo.webp"
-                width="549"
-                height="548"
-                alt="Юрий Угаров"
-              />
-            </div>
-
-            <section class="services">
-              <p class="descriptor descriptor--services">
-                <img
-                  src="/images/icon-services.svg"
-                  width="24"
-                  height="24"
-                  alt=""
-                />
-                Услуги
-              </p>
-              <p class="services-disclaimer">
-                Представленные здесь состав продуктов, цены и сроки носят
-                ознакомительный характер.
-                <span>
-                  Они являются медианой по тем типам работ, которые представляют.
-                </span>
-              </p>
-
-              <article class="service-card service-card--01">
-                <div class="service-card-head">
-                  <span>[01]</span>
-                  <h3>лендинг</h3>
-                </div>
-                <p>
-                  Разработка одностраничного сайта под ключ и по отдельным
-                  этапам
-                </p>
-              </article>
-              <article class="service-card service-card--02">
-                <div class="service-card-head">
-                  <span>[02]</span>
-                  <h3>Корпоративный сайт</h3>
-                </div>
-                <p>
-                  Разработка многостраничного/корпоративного сайта под ключ и
-                  по отдельным этапам
-                </p>
-              </article>
-              <article class="service-card service-card--03">
-                <div class="service-card-head">
-                  <span>[03]</span>
-                  <h3>интернет-магазин</h3>
-                </div>
-                <p>
-                  Разработка интернет-магазина под ключ и по отдельным этапам
-                </p>
-              </article>
-              <article class="service-card service-card--04">
-                <div class="service-card-head">
-                  <span>[04]</span>
-                  <h3>Дизайн упаковки</h3>
-                </div>
-                <p>
-                  Разработка дизайна упаковки для продуктов, подготовка к
-                  печати
-                </p>
-              </article>
-              <article class="service-card service-card--05">
-                <div class="service-card-head">
-                  <span>[05]</span>
-                  <h3>Фирменный стиль</h3>
-                </div>
-                <p>
-                  Разработка логотипа и элементов фирменного стиля бренда
-                </p>
-              </article>
-              <article class="service-card service-card--06">
-                <div class="service-card-head">
-                  <span>[06]</span>
-                  <h3>Экспертиза/<br />Консультация</h3>
-                </div>
-                <p>Консультация по вопросам дизайна</p>
-              </article>
-
-              <div class="services-contact">
-                <p>
-                  Для точной оценки стоимости, сроков и выбора оптимального
-                  решения по вашему проекту свяжитесь со мной
-                </p>
-                <p class="services-contact-links">
-                  <span>
-                    тг:
-                    <a
-                      href="https://t.me/ugarovpro"
-                      target="_blank"
-                      rel="noreferrer"
-                      >@ugarovpro</a
-                    >
-                  </span>
-                  <span>
-                    вк:
-                    <a
-                      href="https://vk.com/yuri_ugarov"
-                      target="_blank"
-                      rel="noreferrer"
-                      >@yuri_ugarov</a
-                    >
-                  </span>
-                </p>
-              </div>
-            </section>
-
-            <section class="reviews">
-              <h2 class="reviews-title inline-padding-5" id="reviews">Отзывы</h2>
-              <p class="descriptor descriptor--reviews">
-                <img
-                  src="/images/icon-reviews.svg"
-                  width="24"
-                  height="24"
-                  alt=""
-                />
-                Рекомендации
-              </p>
-              <ul class="reviews-list ">
-                <li class="review-row ">
-                  <span class="review-client inline-padding-5">ООО «ПРОМТЕХИЗЫСКАНИЯ»</span>
-                  <span class="review-type inline-padding-5">Дизайн</span>
-                  <span class="review-work inline-padding-5">Корпоративный сайт и фирменный стиль</span>
-                </li>
-                <li class="review-row">
-                  <span class="review-client inline-padding-5">ОАО «ГИПРОГАЗЦЕНТР»</span>
-                  <span class="review-type inline-padding-5">Дизайн</span>
-                  <span class="review-work inline-padding-5">Мобильная версия сайта, полиграфия</span>
-                </li>
-                <li class="review-row">
-                  <span class="review-client inline-padding-5">ОАО «БОГРУС»</span>
-                  <span class="review-type inline-padding-5">Дизайн</span>
-                  <span class="review-work inline-padding-5">Фирменный стиль, полиграфия, дизайн упаковки</span>
-                </li>
-              </ul>
-            </section>
-          </div>
-        </div>
-      </div>
 
       <footer class="footer" id="contacts">
         <div class="wrap footer-inner">
@@ -635,9 +291,9 @@
           <div class="footer-bottom">
             <p class="logo-foot">UGAROV</p>
             <nav class="footer-nav">
-              <a href="#top">Главная</a>
+              <a href="index.html">Главная</a>
               <a href="#projects">Проекты</a>
-              <a href="#about">Обо мне</a>
+              <a href="index.html#about">Обо мне</a>
               <a href="#contacts">Контакты</a>
               <a href="#top">Наверх</a>
             </nav>
