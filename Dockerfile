@@ -28,4 +28,4 @@ EXPOSE 3000
 
 USER node
 
-CMD ["sh", "-c", "exec serve -s dist -l tcp://0.0.0.0:${PORT}"]
+CMD ["sh", "-c", "exec serve dist -l tcp://0.0.0.0:${PORT}"]
