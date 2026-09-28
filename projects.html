@@ -188,7 +188,7 @@
                   <img class="lawyer-phone__photo" src="/images/nick-photo.webp" alt="" />
                   <p class="lawyer-phone__kicker">
                     Лучший юрист digital сферы по мнению клиентов<br />
-                    <a href="#projects">смотри отзывы</a>
+                    <span>смотри отзывы</span>
                   </p>
                   <p class="lawyer-phone__place">
                     Сижу в Москве<br />
@@ -211,10 +211,17 @@
                 <span>Corporate site</span>
                 <span>Late 2022</span>
               </p>
-              <a class="case-cta" href="#projects">
+              <span class="case-cta">
                 смотреть
                 <img src="/images/cases/eye.svg" width="95" height="49" alt="" />
-              </a>
+              </span>
+              <button
+                type="button"
+                class="case-open"
+                data-project-images="/images/nick-photo.webp"
+                data-project-alt="Сайт для юриста"
+                aria-label="Смотреть проект: сайт для юриста"
+              ></button>
             </li>
 
             <li class="case case--dyson">
@@ -236,6 +243,13 @@
                   <img class="iphone-frame" src="/images/mokup-iphone.webp" alt="" />
                 </div>
               </div>
+              <button
+                type="button"
+                class="case-open"
+                data-project-images="/images/dyson/1.webp /images/dyson/2.webp /images/dyson/3.webp"
+                data-project-alt="Интернет-магазин техники Dyson"
+                aria-label="Смотреть проект: интернет-магазин техники Dyson"
+              ></button>
             </li>
 
             <li class="case case--tune">
@@ -249,6 +263,13 @@
                 <img class="tune-phone__screen" src="/images/cases/tune-screen-b.png" alt="Сайт ателье тюнинга" />
                 <img class="iphone-frame" src="/images/mokup-iphone.webp" alt="" />
               </div>
+              <button
+                type="button"
+                class="case-open"
+                data-project-images="/images/cases/tune-shot-2.png /images/cases/tune-screen-b.png"
+                data-project-alt="Сайт для ателье тюнинга"
+                aria-label="Смотреть проект: сайт для ателье тюнинга"
+              ></button>
             </li>
           </ul>
         </div>
@@ -304,6 +325,14 @@
         </div>
       </footer>
     </div>
+    <dialog class="project-modal" id="project-modal">
+      <div class="project-modal__panel">
+        <button type="button" class="project-modal__close" data-project-close>
+          Закрыть
+        </button>
+        <div class="project-modal__photos"></div>
+      </div>
+    </dialog>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

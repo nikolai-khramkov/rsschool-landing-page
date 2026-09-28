@@ -127,7 +127,7 @@ const openProjectModal = (card: HTMLButtonElement) => {
   }, 0)
 }
 
-document.querySelectorAll<HTMLButtonElement>('.card[data-project-images]').forEach((card) => {
+document.querySelectorAll<HTMLButtonElement>('[data-project-images]').forEach((card) => {
   card.addEventListener('click', () => openProjectModal(card))
 })
 

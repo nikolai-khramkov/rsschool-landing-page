@@ -40,6 +40,27 @@
   isolation: isolate;
 }
 
+.case-open {
+  position: absolute;
+  z-index: 6;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: -6px;
+  }
+}
+
 .case-bg {
   position: absolute;
   z-index: 0;
@@ -224,7 +245,7 @@
   width: lx(136);
   font-size: lx(9.113);
 
-  a {
+  span {
     text-decoration: underline;
     text-underline-offset: 1px;
   }
