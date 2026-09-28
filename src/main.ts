@@ -103,3 +103,46 @@ if (themeToggle) {
     applyTheme(next)
   }
 }
+
+const projectModal = document.querySelector<HTMLDialogElement>('#project-modal')
+const projectPhotos = projectModal?.querySelector<HTMLElement>('.project-modal__photos')
+
+const openProjectModal = (card: HTMLButtonElement) => {
+  if (!projectModal || !projectPhotos) return
+
+  const sources = (card.dataset.projectImages ?? '').split(/\s+/).filter(Boolean)
+  if (!sources.length) return
+
+  const alt = card.dataset.projectAlt ?? 'Фотография проекта'
+  projectPhotos.replaceChildren(
+    ...sources.map((src, index) => {
+      const image = document.createElement('img')
+      image.src = src
+      image.alt = index === 0 ? alt : ''
+      return image
+    }),
+  )
+  window.setTimeout(() => {
+    if (!projectModal.open) projectModal.showModal()
+  }, 0)
+}
+
+document.querySelectorAll<HTMLButtonElement>('[data-project-images]').forEach((card) => {
+  card.addEventListener('click', () => openProjectModal(card))
+})
+
+projectModal?.querySelector('[data-project-close]')?.addEventListener('click', () => {
+  projectModal.close()
+})
+
+projectModal?.addEventListener('click', (event) => {
+  if (event.target === projectModal) projectModal.close()
+})
+
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && projectModal?.open) projectModal.close()
+})
+
+projectModal?.addEventListener('close', () => {
+  projectPhotos?.replaceChildren()
+})

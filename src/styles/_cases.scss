@@ -1,0 +1,413 @@
+@use 'mixins' as *;
+
+@function ux($px) {
+  @return calc(#{$px} * 100cqi / 1560);
+}
+
+@function uy($px) {
+  @return calc(#{$px} * 100cqb / 600);
+}
+
+@function lx($px) {
+  @return calc(#{$px} * 100cqi / 277.092);
+}
+
+@function ly($px) {
+  @return calc(#{$px} * 100cqb / 574.59);
+}
+
+.cases {
+  padding-bottom: 80px;
+  background: var(--bg-secondary);
+}
+
+.cases-list {
+  display: grid;
+  gap: 30px;
+  margin: 0;
+  padding: 24px 0 0;
+  list-style: none;
+}
+
+.case {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1560 / 600;
+  border-radius: 20px;
+  color: #fff;
+  background: #101010;
+  container-type: size;
+  isolation: isolate;
+}
+
+.case-open {
+  position: absolute;
+  z-index: 6;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: -6px;
+  }
+}
+
+.case-bg {
+  position: absolute;
+  z-index: 0;
+  max-width: none;
+  pointer-events: none;
+}
+
+.case-bg--lawyer {
+  left: -2%;
+  top: -16%;
+  width: 78%;
+  height: 175%;
+  object-fit: cover;
+  object-position: 64% 0%;
+}
+
+.case--lawyer::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.case-mark {
+  position: absolute;
+  z-index: 2;
+  left: ux(577.81);
+  top: uy(59.45);
+  width: ux(958.008);
+  height: auto;
+  mix-blend-mode: screen;
+  opacity: 0.92;
+  pointer-events: none;
+}
+
+.case-title {
+  position: absolute;
+  z-index: 4;
+  left: ux(43);
+  top: uy(43);
+  margin: 0;
+  font-family: 'Lack', 'Onest', sans-serif;
+  font-size: ux(75.18);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.case--dyson .case-title {
+  width: ux(658);
+}
+
+.case-meta {
+  position: absolute;
+  z-index: 4;
+  left: ux(43);
+  top: uy(205);
+  display: grid;
+  margin: 0;
+  font-family: 'Lato', 'Onest', sans-serif;
+  font-size: ux(19.434);
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.case-cta {
+  position: absolute;
+  z-index: 5;
+  left: ux(20);
+  top: uy(460);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: ux(21.48);
+  width: ux(1520);
+  padding: uy(21.48) ux(64);
+  border: 2px solid #fff;
+  border-radius: ux(32.22);
+  background: linear-gradient(252deg, rgba(141, 34, 199, 0.7) 11%, rgba(245, 89, 227, 0.7) 89%);
+  backdrop-filter: blur(22px);
+  color: #fff;
+  font-family: 'Lack', 'Onest', sans-serif;
+  font-size: ux(64.44);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+
+  img {
+    width: ux(94.512);
+    height: auto;
+  }
+
+  &:hover {
+    background: linear-gradient(252deg, rgba(141, 34, 199, 0.88) 11%, rgba(245, 89, 227, 0.88) 89%);
+  }
+}
+
+.lawyer-phone {
+  position: absolute;
+  z-index: 3;
+  left: ux(521.96);
+  top: uy(32.22);
+  width: ux(277.092);
+  aspect-ratio: 1000 / 1923;
+}
+
+.lawyer-phone__screen {
+  position: absolute;
+  left: 3.6%;
+  top: 4.992%;
+  width: 79.7%;
+  height: 89.86%;
+  overflow: hidden;
+  border-radius: 11% / 5.2%;
+  background: #000;
+  container-type: size;
+}
+
+.iphone-frame {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  pointer-events: none;
+}
+
+.lawyer-phone__photo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: ly(1159);
+  max-width: none;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.lawyer-phone__logo,
+.lawyer-phone__menu,
+.lawyer-phone__kicker,
+.lawyer-phone__place,
+.lawyer-phone__name,
+.lawyer-phone__contacts {
+  position: absolute;
+  z-index: 1;
+}
+
+.lawyer-phone__logo {
+  left: lx(15.39);
+  top: ly(29.25);
+  width: lx(30.98);
+  height: auto;
+}
+
+.lawyer-phone__menu {
+  left: lx(230.91);
+  top: ly(23.09);
+  width: lx(30.788);
+  height: auto;
+}
+
+.lawyer-phone__kicker,
+.lawyer-phone__place,
+.lawyer-phone__contacts {
+  left: lx(15.4);
+  margin: 0;
+  font-family: 'Lato', 'Onest', sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.lawyer-phone__kicker {
+  top: ly(70.53);
+  width: lx(136);
+  font-size: lx(9.113);
+
+  span {
+    text-decoration: underline;
+    text-underline-offset: 1px;
+  }
+}
+
+.lawyer-phone__place {
+  top: ly(220);
+  width: lx(123);
+  font-size: lx(10.776);
+}
+
+.lawyer-phone__name {
+  left: lx(15.4);
+  top: ly(268.63);
+  width: lx(246);
+  margin: 0;
+  font-family: 'Lack', 'Onest', sans-serif;
+  font-size: lx(29.249);
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.lawyer-phone__contacts {
+  top: ly(441);
+  font-size: lx(10.776);
+}
+
+.case-bg--dyson {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-bg--dyson-wash {
+  left: ux(-836);
+  top: uy(-132);
+  width: ux(2667);
+  height: uy(872);
+  object-fit: cover;
+}
+
+.case-noise {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: url('/images/cases/dyson-noise.png') top left / 100px 100px;
+  mix-blend-mode: overlay;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.case-phones {
+  position: absolute;
+  z-index: 3;
+  left: ux(723);
+  top: uy(63);
+  display: flex;
+  gap: ux(24.6);
+}
+
+.case-device {
+  position: relative;
+  width: ux(233.915);
+  aspect-ratio: 1000 / 1923;
+}
+
+.case-device__screen {
+  position: absolute;
+  left: 3.6%;
+  top: 4.992%;
+  width: 79.7%;
+  height: 89.86%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 11% / 5.2%;
+}
+
+.case-device:nth-child(2) .case-device__screen {
+  object-position: center 36%;
+}
+
+.case-bg--car {
+  left: 0;
+  top: uy(-830);
+  width: ux(1562);
+  height: uy(2451);
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+
+.case--tune::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(189deg, rgba(0, 0, 0, 0.61) 35%, rgba(0, 0, 0, 0) 46%);
+  pointer-events: none;
+}
+
+.case--tune::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: url('/images/cases/car-noise.png') top left / cover;
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.tune-phone {
+  position: absolute;
+  z-index: 3;
+  top: uy(33);
+  width: ux(242.993);
+  aspect-ratio: 1000 / 1923;
+}
+
+.tune-phone__screen {
+  position: absolute;
+  left: 3.6%;
+  top: 4.992%;
+  width: 79.7%;
+  height: 89.86%;
+  object-fit: cover;
+  border-radius: 11% / 5.2%;
+}
+
+.tune-phone--left {
+  left: ux(781);
+
+  .tune-phone__screen {
+    object-position: center 72%;
+  }
+}
+
+.tune-phone--right {
+  left: ux(1066.85);
+
+  .tune-phone__screen {
+    object-position: center top;
+  }
+}
+
+@include tablet {
+  .cases-list {
+    gap: 16px;
+  }
+
+  .case {
+    border-radius: 16px;
+  }
+}
+
+@include mobile {
+  .cases {
+    padding-bottom: 48px;
+  }
+
+  .case-cta {
+    backdrop-filter: none;
+  }
+}
