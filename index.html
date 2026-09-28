@@ -204,7 +204,12 @@
               Это позволяет добиться максимальной эффективности.
             </p>
 
-            <a class="card card--pti" href="#projects">
+            <button
+              type="button"
+              class="card card--pti"
+              data-project-images="/images/pti-mockup2.webp"
+              data-project-alt="Макет сайта Промтехизыскания"
+            >
               <span class="card-fill" aria-hidden="true"></span>
               <span class="card-title">[ Промтехизыскания ]</span>
               <span class="card-index">01</span>
@@ -244,9 +249,14 @@
                 </span>
                 <span class="card-year">2023</span>
               </span>
-            </a>
+            </button>
 
-            <a class="card card--nick" href="#projects">
+            <button
+              type="button"
+              class="card card--nick"
+              data-project-images="/images/nick-photo.webp"
+              data-project-alt="Мобильный сайт Ника Фомина"
+            >
               <span class="card-title">[ Юрист Ник Фомин ]</span>
               <span class="card-index">02</span>
               <span class="iphone">
@@ -264,11 +274,16 @@
                 </span>
                 <span class="card-year">2022</span>
               </span>
-            </a>
+            </button>
 
             <div class="card-slot card-slot--alicana">
               <span class="card-index">03</span>
-              <a class="card card--circle card--alicana" href="#projects">
+              <button
+                type="button"
+                class="card card--circle card--alicana"
+                data-project-images="/images/alicana.webp"
+                data-project-alt="Упаковка Alicana CBD"
+              >
                 <img
                   class="card-product card-product--alicana"
                   src="/images/alicana.webp"
@@ -287,10 +302,15 @@
                     </textPath>
                   </text>
                 </svg>
-              </a>
+              </button>
             </div>
 
-            <a class="card card--octava" href="#projects">
+            <button
+              type="button"
+              class="card card--octava"
+              data-project-images="/images/octava.webp"
+              data-project-alt="Ноутбук с сайтом Октава"
+            >
               <span class="card-title">[ Октава ]</span>
               <span class="card-index">06</span>
               <img
@@ -305,9 +325,14 @@
                 </span>
                 <span class="card-year">2021</span>
               </span>
-            </a>
+            </button>
 
-            <a class="card card--rwb" href="#projects">
+            <button
+              type="button"
+              class="card card--rwb"
+              data-project-images="/images/rwb-overlay.webp"
+              data-project-alt="Сайт RWB"
+            >
               <span class="card-title">[ RWB ]</span>
               <span class="card-index">04</span>
               <span class="tablet">
@@ -325,9 +350,14 @@
                 </span>
                 <span class="card-year">2022</span>
               </span>
-            </a>
+            </button>
 
-            <a class="card card--dyson" href="#projects">
+            <button
+              type="button"
+              class="card card--dyson"
+              data-project-images="/images/dyson/1.webp /images/dyson/2.webp /images/dyson/3.webp"
+              data-project-alt="Интернет-магазин Dyson"
+            >
               <span class="card-title">[ Dyson ]</span>
               <span class="card-index">05</span>
               <span class="card-mark card-mark--dy">DY</span>
@@ -360,11 +390,16 @@
                 </span>
                 <span class="card-year">2022</span>
               </span>
-            </a>
+            </button>
 
             <div class="card-slot card-slot--landing">
               <span class="card-index">07</span>
-              <a class="card card--circle card--landing" href="#projects">
+              <button
+                type="button"
+                class="card card--circle card--landing"
+                data-project-images="/images/landing-phones.webp"
+                data-project-alt="Мокап лендинга автоматизации"
+              >
                 <img
                   class="card-product card-product--landing"
                   src="/images/landing-phones.webp"
@@ -383,7 +418,7 @@
                     </textPath>
                   </text>
                 </svg>
-              </a>
+              </button>
             </div>
 
             <div class="projects-cta">
@@ -646,6 +681,14 @@
         </div>
       </footer>
     </div>
+    <dialog class="project-modal" id="project-modal">
+      <div class="project-modal__panel">
+        <button type="button" class="project-modal__close" data-project-close>
+          Закрыть
+        </button>
+        <div class="project-modal__photos"></div>
+      </div>
+    </dialog>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
